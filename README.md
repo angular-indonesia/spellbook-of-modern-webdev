@@ -35,6 +35,11 @@
 * Feel free to submit the __missing__ or __better__ links in your opinion. Also, please provide the __reason__.
 * [Why not add a Europe (or other regions) section](https://github.com/dexteryy/spellbook-of-modern-webdev/pull/4#issuecomment-308073026)? [Why not add your project](https://github.com/dexteryy/spellbook-of-modern-webdev/pull/5)? [Why so many React-based projects? Why not Angular/Vue.js/XXX](http://www.npmtrends.com/rxjs-vs-mobx-vs-redux-vs-vue-vs-react-vs-@angular/core-vs-@cycle/dom-vs-backbone-vs-jquery-vs-vuex)?
 
+#### Understanding Modern Web Development
+
+* In English: coming soon...
+* In Chinese: [slides](https://speakerdeck.com/dexteryy/understanding-modern-web-development-at-jsconf-china-2017-zhong-wen) @ [JSConf CN 2017](http://2017.jsconf.cn/#schedule)
+
 <br>
 <br>
 
@@ -53,7 +58,7 @@
   - [Open Web Platform](#open-web-platform)
     - Learning, Reference, Visual Tools
     - Performance, Security, Semantics / SEO / Accessibility
-  - [HTML5 Features](#html5-features)
+  - [HTML5 / Web APIs](#html5--web-apis)
     - HTML/DOM, Appearance, Interaction, Access, Network, Media, Graphics, Computing...
   - [CSS Features](#css-features)
     - RWD, Layout, Typography, Text, Animation, Effects...
@@ -121,7 +126,7 @@
 - [Tooling](#tooling)
   - [Testing](#testing)
     - Unit Testing / Test Runner, Test Doubles
-    - Web Testing (Integration Testing, Functional Testing, Visual testing, Monkey Testing, Headless Browsers)
+    - Web Testing (Integration Testing, Functional/E2E Testing, Visual testing, Monkey Testing, Headless Browsers)
     - Server-side Testing (Functional Testing, Load Testing)
     - Benchmark Testing
     - Analysis (Code Coverage, Node.js Security...)
@@ -145,6 +150,7 @@
     - Output (Color / Style, Icon, Updating Log, Notice, Columns, Curses, Drawing...)
     - Delivery, OS, API, Parser...
   - [IDE / Editors](#ide--editors)
+    - VSCode Plugins (UI, Formating, Operating, Static Analysis, Docs, Assistant, Integration...)
     - Atom Plugins (UI, Formating, Operating, Static Analysis, Docs, Assistant, Integration...)
     - Out-of-the-box Atom IDE, Other Electron-based IDE, Programming Fonts...
   - [Useful Apps](#useful-apps)
@@ -155,7 +161,7 @@
 A Subset as a __Learning Path__
 
 1. [Open Web Platform](#open-web-platform)
-2. [HTML5 Features](#html5-features)
+2. [HTML5 / Web APIs](#html5--web-apis)
 3. [CSS Features](#css-features)
 4. [Next Generation CSS](#next-generation-css)
 5. [Next Generation JS](#next-generation-js)
@@ -222,12 +228,12 @@ A Subset for __Architecture and Infrastructure__
   * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)
     * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference), [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference), [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), [DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events), [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
   * [Google Developers](https://developers.google.com/web/)
-    * [Web Fundamentals](https://developers.google.com/web/fundamentals/), [HTML5Rocks](https://www.html5rocks.com/)
+    * [Web Fundamentals](https://developers.google.com/web/fundamentals/), [HTML5Rocks Archived Tutorials](https://www.html5rocks.com/en/tutorials/)
   * Apple
     * [WebKit JS](https://developer.apple.com/reference/webkitjs/), [WebKit DOM Programming Topics](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/SafariJSProgTopics)
     * [Safari Web Content Guide](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/), [Safari HTML Reference](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html), [Safari CSS Reference](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariCSSRef/), [Safari CSS Visual Effects Guide](https://developer.apple.com/library/content/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/)
   * [Microsoft Edge Developer Guide](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide)
-  * CSS-Tricks's [CSS Almanac](https://css-tricks.com/almanac/)
+  * CSS-Tricks's [CSS Almanac](https://css-tricks.com/almanac/), [Codrops' CSS Reference](https://tympanus.net/codrops/css_reference/)
   * [HTML: The Living Standard (Web Developer Edition)](https://developers.whatwg.org/)
     * [The Web platform: Browser technologies](https://platform.html5.org/)
   * [W3Fools](http://www.w3fools.com/)
@@ -250,28 +256,35 @@ A Subset for __Architecture and Infrastructure__
     * [Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/),
        [CSS and the critical path](http://www.phpied.com/css-and-the-critical-path/)
     * [Evolution of Script Loading](https://www.stevesouders.com/blog/2010/12/06/evolution-of-script-loading/), [Browser script loading roundup](https://www.stevesouders.com/blog/2010/02/07/browser-script-loading-roundup/)
+    * [JavaScript Start-up Performance](https://medium.com/reloading/javascript-start-up-performance-69200f43b201)
   * Offline
     * [Offline UX Considerations](https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux)
+    * [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/)
   * Measure
     * [Measure Performance with the RAIL Model](https://developers.google.com/web/fundamentals/performance/rail)
     * [Measuring Page Load Speed with Navigation Timing](https://www.html5rocks.com/en/tutorials/webperformance/basics/)
     * [Measuring network performance with Resource Timing API](https://developers.googleblog.com/2013/12/measuring-network-performance-with.html)
     * [User Timing API](https://www.html5rocks.com/en/tutorials/webperformance/usertiming/)
+    * [Why Web Developers Need to Care about Interactivity](https://philipwalton.com/articles/why-web-developers-need-to-care-about-interactivity/)
+      * [requestIdleCallback](https://developers.google.com/web/updates/2015/08/using-requestidlecallback)
+      * [PerformanceObserver](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver)
 * Security
   * [The Tangled Web: A Guide to Securing Modern Web Applications](http://lcamtuf.coredump.cx/tangled/)
   * [HTML5 Security Cheatsheet](https://html5sec.org/)
 * Semantics / SEO / Accessibility
   * [Let’s Talk about Semantics](http://html5doctor.com/lets-talk-about-semantics/)
-  * [SEO Tutorial For Beginners in 2017](https://www.hobo-web.co.uk/seo-tutorial/), \
+  * [SEO Tutorial For Beginners](https://www.hobo-web.co.uk/seo-tutorial/), \
     Google's [Search Engine Optimization Starter Guide](http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf)
   * [The A11Y Project](http://a11yproject.com/), [Using ARIA](https://w3c.github.io/using-aria/)
 
 \>\> Return to [Table of Contents](#table-of-contents)
 
-### HTML5 Features
+### HTML5 / Web APIs
 
 * HTML / DOM
-  * [You Might Not Need jQuery](http://youmightnotneedjquery.com/), [You Don't Need jQuery](https://github.com/oneuijs/You-Dont-Need-jQuery)
+  * [You Might Not Need jQuery](http://youmightnotneedjquery.com/), \
+    [You Don't Need jQuery](https://github.com/oneuijs/You-Dont-Need-jQuery), \
+    [(Now More Than Ever) You Might Not Need jQuery](https://css-tricks.com/now-ever-might-not-need-jquery/)
   * [HEAD](https://github.com/joshbuchea/HEAD/)
   * [favicon](https://github.com/audreyr/favicon-cheat-sheet)
   * [Form pseudo-element](https://gist.github.com/webtobesocial/aefd6e25064c08e0cc9a)
@@ -302,7 +315,9 @@ A Subset for __Architecture and Infrastructure__
   * [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API), [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation)
   * [Web Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) , [Vibration](https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API)
 * Network
-  * [XMLHttpRequest2](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) / [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  * [XMLHttpRequest2](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+  * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+    * [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch)
     * [Why I won’t be using Fetch API in my apps](https://medium.com/@shahata/why-i-wont-be-using-fetch-api-in-my-apps-6900e6c6fe78)
   * [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket), [Server-sent Event](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
   * [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
@@ -365,6 +380,9 @@ A Subset for __Architecture and Infrastructure__
     * [CSS Diner - Where we feast on CSS Selectors!](http://flukeout.github.io/)
   * [An Ultimate Guide To CSS Pseudo-Classes And Pseudo-Elements](https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/)
   * [@supports Rule (Feature Queries)](https://www.sitepoint.com/an-introduction-to-css-supports-rule-feature-queries/)
+  * [Houdini](https://github.com/w3c/css-houdini-drafts/wiki)
+    * [Houdini: Demystifying CSS](https://developers.google.com/web/updates/2016/05/houdini), [Houdini: Maybe The Most Exciting Development In CSS You've Never Heard Of](https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/)
+  * [CSSDB](https://cssdb.org/)
 * Responsive Web Design
   * Intro - see _[Platforms and Languages > Next Generation CSS](#next-generation-css) > Know More about Web Design_
   * Media Queries
@@ -377,13 +395,13 @@ A Subset for __Architecture and Infrastructure__
     * [Truly Fluid Typography With vh And vw Units](https://www.smashingmagazine.com/2016/05/fluid-typography/)
 * [Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout)
   * Flexbox, CSS Grid Layout
-    * [Using Flexbox today](https://chriswrightdesign.com/experiments/using-flexbox-today/)
     * [CSS Grid, Flexbox And Box Alignment: Our New System For Web Layout](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-and-box-alignment-our-new-system-for-web-layout/)
-    * [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-    * [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-    * [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/), [Flexbox Patterns](http://www.flexboxpatterns.com/home)
-      * [Centering Elements with Flexbox](https://www.smashingmagazine.com/2013/05/centering-elements-with-flexbox/)
-      * [Quantity Queries with Flexbox](https://www.smashingmagazine.com/2015/07/quantity-ordering-with-css/)
+    * [A Complete Guide to Flexbox (CSS-Tricks)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) / [Flexbox (Codrops)](https://tympanus.net/codrops/css_reference/flexbox/)
+      * [Using Flexbox today](https://chriswrightdesign.com/experiments/using-flexbox-today/)
+      * [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/), [Flexbox Patterns](http://www.flexboxpatterns.com/home)
+        * [Centering Elements with Flexbox](https://www.smashingmagazine.com/2013/05/centering-elements-with-flexbox/)
+        * [Quantity Queries with Flexbox](https://www.smashingmagazine.com/2015/07/quantity-ordering-with-css/)
+    * [A Complete Guide to Grid (CSS-Tricks)](https://css-tricks.com/snippets/css/complete-guide-grid/) / [A Complete Guide to CSS Grid (Codrops)](https://tympanus.net/codrops/css_reference/grid/)
   * Traditional
     * [Learn CSS Layout](http://learnlayout.com/)
       * [Learn CSS Layout - the pedantic way](http://book.mixu.net/css/)
@@ -423,29 +441,38 @@ A Subset for __Architecture and Infrastructure__
 
 ### Next Generation CSS
 
-* [CSS Modules](https://github.com/css-modules/css-modules)
-  * [The End of Global CSS](https://medium.com/seek-blog/the-end-of-global-css-90d2a4a06284)
-  * Tools - see _[Tooling > Toolchain](#toolchain) > Builder / Bundler > Webpack_
-* [PostCSS](http://postcss.org/)
-  * Intro
-    * [Meet PostCSS](http://www.meetpostcss.com/)
-    * [PostCSS – A Comprehensive Introduction](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/)
-    * [PostCSS – Sass Killer or Preprocessing Pretender?](https://ashleynolan.co.uk/blog/postcss-a-review)
-    * [PostCSS Playground](https://sneakertack.github.io/postcss-playground/)
-  * [CSSNext](http://cssnext.io/)
-    * [It’s Time To Start Using CSS Custom Properties](https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/)
-    * [Getting Started With CSS calc()](https://www.smashingmagazine.com/2015/12/getting-started-css-calc-techniques/)
-  * More Plugins - see _[Tooling > Toolchain](#toolchain) > Compiler / Transpiler / Preprocessor > PostCSS_
+* Preprocessor-based CSS
+  * [CSS Modules](https://github.com/css-modules/css-modules)
+    * [The End of Global CSS](https://medium.com/seek-blog/the-end-of-global-css-90d2a4a06284)
+    * Tools - see _[Tooling > Toolchain](#toolchain) > Builder / Bundler > Webpack_
+  * [PostCSS](http://postcss.org/)
+    * Intro
+      * [Meet PostCSS](http://www.meetpostcss.com/)
+      * [PostCSS – A Comprehensive Introduction](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/)
+      * [PostCSS – Sass Killer or Preprocessing Pretender?](https://ashleynolan.co.uk/blog/postcss-a-review)
+      * [PostCSS Playground](https://sneakertack.github.io/postcss-playground/)
+    * [CSSNext](http://cssnext.io/)
+      * [It’s Time To Start Using CSS Custom Properties](https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/)
+      * [Getting Started With CSS calc()](https://www.smashingmagazine.com/2015/12/getting-started-css-calc-techniques/)
+    * More Plugins - see _[Tooling > Toolchain](#toolchain) > Compiler / Transpiler / Preprocessor > PostCSS_
 * [CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js)
-  * [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
+  * Intro
+    * [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
+    * [A Brief History of CSS-in-JS: How We Got Here and Where We’re Going](https://levelup.gitconnected.com/a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04), [The State of CSS](http://ryanogles.by/css/javascript/2017/05/25/the-state-of-css.html)
+    * [Comparison of CSS-in-JS solutions](http://michelebertoli.github.io/css-in-js/)
   * [Styled-Components](https://github.com/styled-components/styled-components)
     * [Styled Components: Enforcing Best Practices In Component-Based Systems](https://www.smashingmagazine.com/2017/01/styled-components-enforcing-best-practices-component-based-systems/)
     * [Writing your styles in JS ≠ writing inline styles](http://mxstbr.blog/2016/11/inline-styles-vs-css-in-js/)
+    * Libraries
+      * [system-components](https://github.com/jxnblk/styled-system/tree/master/system-components) / [styled-system](https://github.com/jxnblk/styled-system)
+      * [styled-normalize](https://github.com/sergeysova/styled-normalize) / [styled-sanitize](https://www.npmjs.com/package/styled-sanitize)
+      * [styled-components-breakpoint](https://github.com/jameslnewell/styled-components-breakpoint)
+      * [styled-tools](https://github.com/diegohaz/styled-tools)
   * [Aphrodite](https://github.com/Khan/aphrodite)
     * [Inline CSS at Khan Academy: Aphrodite](http://engineering.khanacademy.org/posts/aphrodite-inline-css.htm)
   * [JSS](http://cssinjs.org/), [Radium](http://formidable.com/open-source/radium/)
 * Best Practices
-  * [Skeleton.css](http://getskeleton.com/) / [Normalize.css](http://nicolasgallagher.com/about-normalize-css/) / [Reset.css](http://meyerweb.com/eric/tools/css/reset/)
+  * [Sanitize.css](https://github.com/csstools/sanitize.css) / [Normalize.css](http://nicolasgallagher.com/about-normalize-css/) / [Reset.css](http://meyerweb.com/eric/tools/css/reset/)
   * Methodology
     * [BEM](https://en.bem.info/methodology/)
       * [BEM 101](https://css-tricks.com/bem-101/) / [MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
@@ -493,6 +520,9 @@ A Subset for __Architecture and Infrastructure__
       * [CSS with vertical rhythm](https://drewish.com/tools/vertical-rhythm/)
     * [More Meaningful Typography](https://alistapart.com/article/more-meaningful-typography)
       * [Modular Scale](http://www.modularscale.com/)
+  * Design System
+    * [A comprehensive guide to design systems](https://www.invisionapp.com/blog/guide-to-design-systems/), [Design Systems Handbook](https://www.designbetter.co/design-systems-handbook/introducing-design-systems)
+    * [styled-system](https://github.com/jxnblk/styled-system)
   * Style Guide
     * [Style Guide Driven Development / Living Style Guides](http://styleguides.io/)
     * Tools - see _[Tooling > Documentation](#documentation) > Style Guide_
@@ -541,14 +571,14 @@ A Subset for __Architecture and Infrastructure__
       * Notes
         * [Equality operators](http://dmitrysoshnikov.com/notes/note-2-ecmascript-equality-operators/), [Default values of parameters](http://dmitrysoshnikov.com/ecmascript/es6-notes-default-values-of-parameters/)
     * Dmitri Pavlutin
-      * [equality operator](https://rainsoft.io/the-legend-of-javascript-equality-operator/), [undefined](https://rainsoft.io/7-tips-to-handle-undefined-in-javascript/)
-      * [variables hoisting](https://rainsoft.io/javascript-hoisting-in-details/), [variables lifecycle](https://rainsoft.io/variables-lifecycle-and-why-let-is-not-hoisted/)
-      * [declare functions](https://rainsoft.io/6-ways-to-declare-javascript-functions/), ['this' keyword](https://rainsoft.io/gentle-explanation-of-this-in-javascript/)
-      * [three dots](https://rainsoft.io/how-three-dots-changed-javascript/)
-      * [array creation](https://rainsoft.io/power-up-the-array-creation-in-javascript/), [object literals](https://rainsoft.io/why-object-literals-in-javascript-are-cool/)
-      * [well-known symbols](https://rainsoft.io/detailed-overview-of-well-known-symbols/)
-      * [small and plain functions](https://rainsoft.io/the-art-of-writing-small-and-plain-functions/)
-      * [unicode](https://rainsoft.io/what-every-javascript-developer-should-know-about-unicode/)
+      * [equality operator](https://dmitripavlutin.com/the-legend-of-javascript-equality-operator/), [undefined](https://dmitripavlutin.com/7-tips-to-handle-undefined-in-javascript/)
+      * [variables hoisting](https://dmitripavlutin.com/javascript-hoisting-in-details/), [variables lifecycle](https://dmitripavlutin.com/variables-lifecycle-and-why-let-is-not-hoisted/)
+      * [declare functions](https://dmitripavlutin.com/6-ways-to-declare-javascript-functions/), ['this' keyword](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
+      * [three dots](https://dmitripavlutin.com/how-three-dots-changed-javascript/)
+      * [array creation](https://dmitripavlutin.com/power-up-the-array-creation-in-javascript/), [object literals](https://dmitripavlutin.com/why-object-literals-in-javascript-are-cool/)
+      * [well-known symbols](https://dmitripavlutin.com/detailed-overview-of-well-known-symbols/)
+      * [small and plain functions](https://dmitripavlutin.com/the-art-of-writing-small-and-plain-functions/)
+      * [unicode](https://dmitripavlutin.com/what-every-javascript-developer-should-know-about-unicode/)
     * Other
       * [The Evolution of JavaScript Modularity](https://github.com/myshov/history-of-javascript/tree/master/4_evolution_of_js_modularity)
       * [About object-oriented design and the “class” & “extends” keywords in ES6](http://blog.wolksoftware.com/about-classes-inheritance-and-object-oriented-design-in-typescript-and-es6)
@@ -561,12 +591,30 @@ A Subset for __Architecture and Infrastructure__
   * [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
   * [JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 * Important Proposals
-  * [ES Modules](https://medium.com/webpack/the-state-of-javascript-modules-4636d1774358) in [Browsers](https://jakearchibald.com/2017/es-modules-in-browsers/) and [Node.js](https://hackernoon.com/node-js-tc-39-and-modules-a1118aecf95e)
+  * ESM (ECMAScript Modules)
+    * Intro
+      * [The state of JavaScript modules](https://medium.com/webpack/the-state-of-javascript-modules-4636d1774358)
+      * [ECMAScript 6 modules: the final syntax](http://2ality.com/2014/09/es6-modules-final.html)
+      * [ES6 Modules in Depth](https://ponyfoo.com/articles/es6-modules-in-depth#the-es6-module-system)
+    * Browsers
+      * [ECMAScript modules in browsers](https://jakearchibald.com/2017/es-modules-in-browsers/)
+    * Node.js
+      * [Node.js, TC-39, and Modules](https://hackernoon.com/node-js-tc-39-and-modules-a1118aecf95e)
+      * [.mjs](https://nodejs.org/api/esm.html)
+        * [Using ES modules natively in Node.js](http://2ality.com/2017/09/native-esm-node.html)
+      * [esm](https://www.npmjs.com/package/esm)
+        * [ES Modules in Node Today!](https://medium.com/web-on-the-edge/es-modules-in-node-today-32cff914e4b)
+  * [Dynamic Import (`import()`)](https://github.com/tc39/proposal-dynamic-import)
   * [Class Fields & Static Properties](https://github.com/tc39/proposal-class-public-fields/issues/46#issuecomment-239031422)
   * [Decorators](https://github.com/wycats/javascript-decorators)
   * [async/await](https://github.com/yortus/asyncawait), [Promise](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise), [Promise Promote](https://www.promisejs.org/), [Promises/A+](https://promisesaplus.com/implementations)
   * [Observables](https://github.com/tc39/proposal-observable)
   * [Static Typing](https://ecmascript-daily.github.io/pages/status-of-static-typing-in-ecmascript/)
+  * Concurrent JS / Parallel JavaScript
+    * [Concurrent JavaScript: It can work!](https://webkit.org/blog/7846/concurrent-javascript-it-can-work/)
+    * [The Path to Parallel JavaScript](https://blog.mozilla.org/javascript/2015/02/26/the-path-to-parallel-javascript/)
+      * [A Taste of JavaScript’s New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+      * [A cartoon intro to ArrayBuffers and SharedArrayBuffers](https://hacks.mozilla.org/2017/06/a-cartoon-intro-to-arraybuffers-and-sharedarraybuffers/)
 * Functional Programming
   * [Functional Programming for JavaScript People](https://medium.com/@chetcorcos/functional-programming-for-javascript-people-1915d8775504)
   * [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon)
@@ -601,10 +649,13 @@ A Subset for __Architecture and Infrastructure__
     * [Flow Runtime](https://codemix.github.io/flow-runtime/)
     * [Flow Comments](https://flow.org/blog/2015/02/20/Flow-Comments/)
   * [TypeScript](http://www.typescriptlang.org/)
+    * [TypeScript Playground](https://www.typescriptlang.org/play/)
     * [DefinitelyTyped](http://definitelytyped.org/), [TypeSearch](http://microsoft.github.io/TypeSearch/)
   * [tcomb](https://www.npmjs.com/package/tcomb)
   * [JSDoc Tags](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler)
     * [jsdoc-to-assert](https://github.com/azu/jsdoc-to-assert)
+* Concurrent JS / Parallel JavaScript
+  * [Napa.js](https://github.com/Microsoft/napajs/)
 * Code Style
   * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
   * [Node.js Style Guide](https://github.com/felixge/node-style-guide)
@@ -645,7 +696,7 @@ A Subset for __Architecture and Infrastructure__
     * [Can I Use](http://caniuse.com/)
     * [Chrome](https://www.chromestatus.com/features), [WebKit](https://webkit.org/status/), [Firefox](https://platform-status.mozilla.org/), [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/), [TBS (China)](http://x5.tencent.com/tbs/guide/w3c.html)
   * Platform Releases
-    * [Chrome](https://chromereleases.googleblog.com/), [Safari](https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Introduction/Introduction.html) ([Webkit](https://trac.webkit.org/)), [Firefox](https://www.mozilla.org/en-US/firefox/releases/), [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/)
+    * [Chrome](https://chromereleases.googleblog.com/), [Safari](https://developer.apple.com/safari/whats-new/) ([Webkit](https://trac.webkit.org/)), [Firefox](https://www.mozilla.org/en-US/firefox/releases/), [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/)
   * Platform Updates
     * [Mozilla Hacks](https://hacks.mozilla.org/)
     * [Web Updates](https://developers.google.com/web/updates/), [Chromium Blog](https://blog.chromium.org/)
@@ -659,10 +710,15 @@ A Subset for __Architecture and Infrastructure__
   * Email
     * [CSS Support Guide for Email Clients](https://www.campaignmonitor.com/css/) / [Email Client CSS Support](https://templates.mailchimp.com/resources/email-client-css-support/)
     * [Email Design Reference](https://templates.mailchimp.com/) + [HTML Email Templates](https://github.com/mailchimp/Email-Blueprints)
-* ECMAScript
+* Node.js
+  * Platform Releases
+    * [Node.js Release Working Group](https://github.com/nodejs/Release)
+* ECMAScript Support
   * [ECMAScript compatibility table](http://kangax.github.io/compat-table/es6/)
-  * [Node.js ES2015 Support](http://node.green/)
-    * Node 8.x - [V8 5.9](https://v8project.blogspot.hk/2017/04/v8-release-59.html), [Ignition + Turbofan launched](https://v8project.blogspot.hk/2017/05/launching-ignition-and-turbofan.html)
+  * [Node.js ES2015+ Support](http://node.green/)
+    * Node 10.x LTS - Supports ES modules natively (without `--experimental-modules`)
+    * [Node.8.5](https://nodejs.org/en/blog/release/v8.5.0/) - Supports ES modules natively (`.mjs` + `--experimental-modules`)
+    * [Node 8.3](https://nodejs.org/en/blog/release/v8.3.0/) - [V8 6.0](https://v8project.blogspot.hk/2017/04/v8-release-59.html), [Ignition + Turbofan launched](https://v8project.blogspot.hk/2017/05/launching-ignition-and-turbofan.html)
     * [Node 8.0 LTS](https://nodejs.org/en/blog/release/v8.0.0/) - [V8 5.8](https://v8project.blogspot.hk/2017/03/v8-release-58.html), [Five New Features You Need To Know](http://codingsans.com/blog/node-8)
     * [Node 7.6](https://nodejs.org/en/blog/release/v7.6.0/) - [V8 5.5](https://v8project.blogspot.hk/2016/10/v8-release-55.html), Async functions
     * [Node 6.0 LTS](https://nodejs.org/en/blog/release/v6.0.0/) - [V8 5.0](https://v8project.blogspot.hk/2016/03/v8-release-50.html), 93% of ES6 language features
@@ -678,18 +734,17 @@ A Subset for __Architecture and Infrastructure__
       * [An Inside View of the CSS Working Group at W3C](http://fantasai.inkedblade.net/weblog/2011/inside-csswg/)
   * [WICG](https://wicg.github.io/admin/charter.html) (Web Incubator Community Group)
     * [Proposals](https://github.com/WICG)
-  * [WHATWG](https://wiki.whatwg.org/wiki/FAQ#The_WHATWG) (Web Hypertext Application Technology Working Group)
+  * [WHATWG](https://whatwg.org/faq) (Web Hypertext Application Technology Working Group)
     * [WHATWG Live Standards](https://spec.whatwg.org/)
     * Inside
       * [W3C vs. WHATWG HTML5 Specs – The Differences Documented](http://developer.telerik.com/featured/w3c-vs-whatwg-html5-specs-differences-documented/)
   * [ECMA TC39](http://ecma-international.org/memento/TC39.htm) (Ecma International Technical Committee 39)
     * [Status, process, and documents for ECMA262](https://github.com/tc39/ecma262)
-      * [ECMAScript Proposals](https://github.com/tc39/proposals)
+      * [ECMAScript Proposals](https://github.com/tc39/proposals) / [TC39 Proposals](https://prop-tc39.now.sh/)
     * Inside
       * [The TC39 Process](http://tc39.github.io/process-document/) / [The TC39 process for ECMAScript features](http://2ality.com/2015/11/tc39-process.html)
-  * [Node.js CTC](https://github.com/nodejs/CTC) (Node.js Core Technical Committee)
-    * [Meeting Notes](https://github.com/nodejs/CTC/tree/master/meetings)
-    * [Node.js EPs (Enhancement Proposals)](https://github.com/nodejs/node-eps)
+  * [Node.js TSC](https://github.com/nodejs/TSC) (Node.js Foundation Technical Steering Committee)
+    * [Meeting Notes](https://github.com/nodejs/TSC/tree/master/meetings)
     * Inside
       * [How Node.js created a model open source community](https://readwrite.com/2016/04/15/how-node-js-model-open-source-community-pl1/)
       * [Healthy Open Source](https://medium.com/the-node-js-collection/healthy-open-source-967fa8be7951)
@@ -721,6 +776,8 @@ A Subset for __Architecture and Infrastructure__
       * JavaScript performance updates - [2015](https://blogs.windows.com/msedgedev/2015/05/20/delivering-fast-javascript-performance-in-microsoft-edge), [2016](https://blogs.windows.com/msedgedev/2016/06/22/javascript-performance-updates-anniversary-update/), [2017](https://blogs.windows.com/msedgedev/2017/04/20/improved-javascript-performance-webassembly-shared-memory/)
     * Next Generation
       * [Roadmap](https://github.com/Microsoft/ChakraCore/wiki/Roadmap)
+  * [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey)
+    * [The monkeys in 2013](https://blog.mozilla.org/javascript/2014/01/23/the-monkeys-in-2013/)
   * Benchmarks
     * [The truth about traditional JavaScript benchmarks](http://benediktmeurer.de/2016/12/16/the-truth-about-traditional-javascript-benchmarks/)
     * [Browser Benchmarks](http://browserbench.org/)
@@ -730,7 +787,7 @@ A Subset for __Architecture and Infrastructure__
   * [Cordova](https://cordova.apache.org/)
     * [Platform Support](https://cordova.apache.org/docs/en/latest/guide/support/index.html)
     * [Top Mistakes by Developers new to Cordova/Phonegap](https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/new-to-Phonegap.md)
-    * Curated Plugins - [Awesome Cordova Plugins](https://github.com/rdn87/awesome-cordova-plugins#list-plugins), [Telerik Verified Plugins](http://plugins.telerik.com/cordova)
+    * Curated Plugins - [Awesome Cordova Plugins](https://github.com/rdn87/awesome-cordova-plugins#list-plugins)
     * Finding Plugins - [plugreg](http://www.plugreg.com/) / [Plugin Search](https://cordova.apache.org/plugins/)
   * [React Native](http://facebook.github.io/react-native/) / [NativeScript](https://www.nativescript.org/) / [Weex](https://weex-project.io/)
     * [React Native Styling Cheat Sheet](https://github.com/vhpoet/react-native-styling-cheat-sheet)
@@ -772,12 +829,13 @@ A Subset for __Architecture and Infrastructure__
   * Server-Sent Events - [EventSource Polyfill](https://github.com/amvtek/EventSource)
   * WebSocket - [Socket.IO-client](https://www.npmjs.com/package/socket.io-client) / [Engine.IO-client](https://www.npmjs.com/package/engine.io-client) / [SockJS-client](https://www.npmjs.com/package/sockjs-client)
 * Performance
+  * Web Worker - [Greenlet](https://github.com/developit/greenlet) / [Workerize](https://github.com/developit/workerize)
   * `document-write` - [PostScribe](https://www.npmjs.com/package/postscribe)
   * User Timing API - [marky](https://www.npmjs.com/package/marky)
 * Offline
-  * Service Work - [sw-toolbox](https://googlechrome.github.io/sw-toolbox/)
+  * Service Work - [Workbox](https://developers.google.com/web/tools/workbox/)
   * File / FileReader API
-    * [FileSaver.js](https://www.npmjs.com/package/file-saver)
+    * [FileSaver.js](https://www.npmjs.com/package/file-saver) / [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js)
     * [blob-util](https://www.npmjs.com/package/blob-util)
   * IndexedDB
     * LocalStorage API - [localForage](https://www.npmjs.com/package/localforage)
@@ -821,6 +879,7 @@ A Subset for __Architecture and Infrastructure__
   * [Lerna](https://lernajs.io/)
   * [semantic-release](https://www.npmjs.com/package/semantic-release) / [np](https://www.npmjs.com/package/np), [gh-release](https://www.npmjs.com/package/gh-release)
   * [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+  * [check-dependencies](https://www.npmjs.com/package/check-dependencies)
   * [changed-log](https://www.npmjs.com/package/changed-log)
   * [license-checker](https://www.npmjs.com/package/license-checker)
 * Convention
@@ -833,6 +892,7 @@ A Subset for __Architecture and Infrastructure__
     * Changelog
       * [Conventional Commits](https://conventionalcommits.org/)
       * [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog)
+      * [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
     * License
       * [Choose an open source license](https://choosealicense.com/)
   * SemVer
@@ -865,16 +925,19 @@ A Subset for __Architecture and Infrastructure__
   * FP
     * [Ramda](http://ramdajs.com/)
       * [ramda-fantasy](https://www.npmjs.com/package/ramda-fantasy)
-    * [Immutable](http://facebook.github.io/immutable-js/)
-      * Lightweight Alternative - [object-path-immutable](https://www.npmjs.com/package/object-path-immutable) / [dot-prop-immutable](https://www.npmjs.com/package/dot-prop-immutable)
+    * Immutable
+      * [immutability-helper](https://www.npmjs.com/package/immutability-helper) + [redux-immutable-state-invariant](https://www.npmjs.com/package/redux-immutable-state-invariant) / [redux-freeze](https://www.npmjs.com/package/redux-freeze)
+      * [icepick](https://www.npmjs.com/package/icepick) / [seamless-immutable](https://www.npmjs.com/package/seamless-immutable) / [dot-prop-immutable](https://www.npmjs.com/package/dot-prop-immutable) / [object-path-immutable](https://www.npmjs.com/package/object-path-immutable) / [timm](https://www.npmjs.com/package/timm) / [updeep](https://www.npmjs.com/package/updeep)
+      * [ImmutableJS](http://facebook.github.io/immutable-js/)
   * OOP
-    * [core-decorators](https://www.npmjs.com/package/core-decorators)
+    * [core-decorators](https://www.npmjs.com/package/core-decorators) + [lodash-decorators](https://www.npmjs.com/package/lodash-decorators)
     * [Stampit](https://www.npmjs.com/package/stampit)
   * Async
     * Observable - [RxJS](https://www.npmjs.com/package/rxjs)
-    * Promise - [Bluebird](http://bluebirdjs.com/docs/features.html)
+    * Promise - [es6-promisify](https://www.npmjs.com/package/es6-promisify), [Bluebird](http://bluebirdjs.com/docs/features.html)
     * Generator - [Co](https://www.npmjs.com/package/co)
     * Callback - [Async](http://caolan.github.io/async/)
+  <!-- * Concurrent / Parallel -->
   * Syntax
     * [XRegExp](https://www.npmjs.com/package/xregexp)
   * Node.js API
@@ -883,7 +946,7 @@ A Subset for __Architecture and Infrastructure__
   * Debugging
     * [debug](https://www.npmjs.com/package/debug) / [pino](https://www.npmjs.com/package/pino)
 * Hashing / Generating
-  * [uuid](https://www.npmjs.com/package/uuid)
+  * [uuid](https://www.npmjs.com/package/uuid) / [cuid](http://usecuid.org)
   * [shortid](https://www.npmjs.com/package/shortid) / [punycode](https://www.npmjs.com/package/punycode) / [string-hash](https://www.npmjs.com/package/string-hash)
   * [base64-js](https://www.npmjs.com/package/base64-js) / [sha.js](https://www.npmjs.com/package/sha.js) / [spark-md5](https://www.npmjs.com/package/spark-md5) / [crypto-js](https://www.npmjs.com/package/crypto-js) / [jsrsasign](https://www.npmjs.com/package/jsrsasign)
 * Parsing / Manipulating
@@ -904,12 +967,11 @@ A Subset for __Architecture and Infrastructure__
   * Numbers
     * Number Manipulation - [Numeral.js](http://numeraljs.com/)
     * Money - [accounting.js](http://openexchangerates.github.io/accounting.js/)
-    * Computation - [Math.js](http://mathjs.org/), [Simple Statistics](https://simplestatistics.org/), [ndarray](https://www.npmjs.com/package/ndarray)
   * Color
     * Color Manipulation - [Chroma.js](http://gka.github.io/chroma.js/), [Chromatism](https://www.npmjs.com/package/chromatism), [randomColor](https://www.npmjs.com/package/randomcolor)
     * Color Extraction - [node-vibrant](https://www.npmjs.com/package/node-vibrant) / [Colorify.js](http://colorify.rocks/)
   * Text
-    * Text Manipulation - [Voca.js](https://vocajs.com) / [string.js](http://stringjs.com/)
+    * Text Manipulation - [Voca.js](https://vocajs.com) / [string.js](https://github.com/jprichardson/string.js)
     * Characters - [string-width](https://www.npmjs.com/package/string-width), [string-length](https://www.npmjs.com/package/string-length)
     * HTML Entities - [he](https://www.npmjs.com/package/he)
     * Human-readable Slug - [speakingurl](https://www.npmjs.com/package/speakingurl)
@@ -917,11 +979,13 @@ A Subset for __Architecture and Infrastructure__
     * HTTP - [mime-types](https://www.npmjs.com/package/mime-types), [content-type](https://www.npmjs.com/package/content-type)
     * JSON Superset - [serialize-javascript](https://www.npmjs.com/package/serialize-javascript), [JSON5](https://www.npmjs.com/package/json5)
     * Markdown - [marked](https://www.npmjs.com/package/marked) / [markdown-it](https://www.npmjs.com/package/markdown-it)
+      * [CommonMark](http://commonmark.org/), [A formal spec for GitHub Flavored Markdown](https://githubengineering.com/a-formal-spec-for-github-markdown/)
     * Links Recognition - [linkify-it](https://www.npmjs.com/package/linkify-it)
     * Language Detection - [franc](https://www.npmjs.com/package/franc)
     * Text Differencing - [diff](https://www.npmjs.com/package/diff)
+    * JSON Differencing - [deep-diff](https://www.npmjs.com/package/deep-diff)
     * Search - [Fuse.js](http://fusejs.io/) / [fuzzysearch](https://www.npmjs.com/package/fuzzysearch) / [Lunr.js](https://lunrjs.com) / [js-worker-search](https://www.npmjs.com/package/js-worker-search), [regexgen](https://www.npmjs.com/package/regexgen) / [escape-string-regexp](https://www.npmjs.com/package/escape-string-regexp)
-    * DSL Paser - [PEG.js](https://pegjs.org/) / [nearley](http://nearley.js.org/)
+    * DSL Parser - [PEG.js](https://pegjs.org/) / [nearley](http://nearley.js.org/)
   * Buffer / Blob
     * Type Detection - [file-type](https://www.npmjs.com/package/file-type), [image-type](https://www.npmjs.com/package/image-type)
     * Size Detection - [probe-image-size](https://www.npmjs.com/package/probe-image-size)
@@ -933,7 +997,9 @@ A Subset for __Architecture and Infrastructure__
 * Network
   * HTTP / XHR
     * Low-level - [Isomorphic Fetch](https://github.com/matthew-andrews/isomorphic-fetch)
-    * High-level -[Axios](https://www.npmjs.com/package/axios) / [Hifetch](https://github.com/dexteryy/hifetch) (author's own project)
+    * High-level
+      * Based on XHR - [Axios](https://www.npmjs.com/package/axios)
+      * Based on Fetch API - [hifetch](https://github.com/dexteryy/Project-WebCube/blob/master/packages/hifetch)
     * GraphQL - [lokka](https://github.com/kadirahq/lokka)
   * TCP
     * [MQTT](https://www.npmjs.com/package/mqtt)
@@ -947,9 +1013,12 @@ A Subset for __Architecture and Infrastructure__
     * MongoDB API - [NeDB](https://www.npmjs.com/package/nedb)
     * CouchDB API - [PouchDB](https://pouchdb.com)
   * Realtime / P2P - [Gun](https://www.npmjs.com/package/gun), [ShareDB](https://www.npmjs.com/package/sharedb)
+* Computation
+  * [Math.js](http://mathjs.org/), [Simple Statistics](https://simplestatistics.org/), [ndarray](https://www.npmjs.com/package/ndarray), [bignumber.js](http://mikemcl.github.io/bignumber.js/)
 * NLP
   * [compromise](https://github.com/nlp-compromise/compromise) / [talisman](http://yomguithereal.github.io/talisman/)
-* ML
+* ML/DL
+  * [TensorFlow.js](https://js.tensorflow.org/)
   * [MLJS](https://www.npmjs.com/package/ml), [Synaptic](https://www.npmjs.com/package/synaptic)
 
 \>\> Return to [Table of Contents](#table-of-contents)
@@ -962,12 +1031,14 @@ A Subset for __Architecture and Infrastructure__
   * [React](https://facebook.github.io/react/)
     * Learning
       * Pete Hunt's [react-howto](https://github.com/petehunt/react-howto)
-      * [SurviveJS React](https://survivejs.com/react/introduction/)
+      * [React - Basic Theoretical Concepts](https://github.com/reactjs/react-basic)
+      * [Under the hood: ReactJS](https://bogdan-lyashenko.github.io/Under-the-hood-ReactJS/)
+      * [SurviveJS React](https://survivejs.com/react/introduction/) / [React Express](http://www.react.express/)
       * [React Cheat Sheet](https://reactcheatsheet.com/)
       * Best Practices
         * [React Bits](https://github.com/vasanthk/react-bits), [React in patterns](https://github.com/krasimir/react-in-patterns)
         * [Functional UI and Components as Higher Order Functions](https://blog.risingstack.com/functional-ui-and-components-as-higher-order-functions/)
-      * Next Gen - [React Fiber Architecture](https://github.com/acdlite/react-fiber-architecture)
+      * Next Gen - [What is React Fiber?](https://gist.github.com/duivvv/2ba00d413b8ff7bc1fa5a2e51c61ba43), [React 16](https://github.com/facebook/react/issues/10294)
     * Component Utilities
       * [Recompose](https://github.com/acdlite/recompose)
       * [React Display Name](https://www.npmjs.com/package/react-display-name)
@@ -986,65 +1057,99 @@ A Subset for __Architecture and Infrastructure__
       * [React Cookie](https://www.npmjs.com/package/react-cookie)
     * Use React Alone
       * [Redial](https://www.npmjs.com/package/redial) / [React Refetch](https://www.npmjs.com/package/react-refetch)
-      * [Formsy React](https://www.npmjs.com/package/formsy-react) / [React Form](https://www.npmjs.com/package/react-form)
+      * [formik](https://www.npmjs.com/package/formik) / [Formsy React](https://www.npmjs.com/package/formsy-react)
     * Lightweight Alternative
       * [Preact](https://preactjs.com/) / [Inferno](https://infernojs.org/)
   * [Angular](https://angular.io/)
   * [Vue.js](https://vuejs.org/)
+  * Cross-framework
+    * [vuera](https://github.com/akxcv/vuera)
 * Model / App State
   * [Redux](http://redux.js.org/)
     * Learning
       * [Notes of Dan Abramov's Redux course videos](https://github.com/tayiorbeii/egghead.io_redux_course_notes)
       * [A cartoon intro to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
       * [Tic-Tac-Toe.js: redux pattern in plain JavaScript](http://ramonvictor.github.io/tic-tac-toe-js/)
-    * Utilities
-      * [React Redux](https://www.npmjs.com/package/react-redux)
-      * [Redux Form](http://redux-form.com/)
-      * [Redux Auth Wrapper](https://www.npmjs.com/package/redux-auth-wrapper)
+    * Reduce Boilerplate
+      * [redux-cube](https://github.com/dexteryy/Project-WebCube/tree/master/packages/redux-cube) (Author's own project)
+    * Connect
+      * [react-redux](https://www.npmjs.com/package/react-redux)
+      * [reselect](https://www.npmjs.com/package/reselect)
+    * Action Types, Action Creators, Reducer Switch
+      * [redux-actions](https://www.npmjs.com/package/redux-actions)
+      * [flux-standard-action](https://www.npmjs.com/package/flux-standard-action)
+      * [topologically-combine-reducers](https://www.npmjs.com/package/topologically-combine-reducers)
+    * Asnyc Actions
+      * [redux-thunk](https://www.npmjs.com/package/redux-thunk) + [redux-promise-middleware](https://www.npmjs.com/package/redux-promise-middleware) + [redux-debounced](https://www.npmjs.com/package/redux-debounced)
+      * [redux-observable](https://www.npmjs.com/package/redux-observable)
+      * [redux-saga](https://github.com/redux-saga/redux-saga)
+      * [redux-api-middleware](https://www.npmjs.com/package/redux-api-middleware) / [redux-axios-middleware](https://www.npmjs.com/package/redux-axios-middleware) / [redux-socket.io](http://npmjs.com/redux-socket.io)
+      * [redux-rest-resource](https://www.npmjs.com/package/redux-rest-resource)  / [redux-json-api](https://www.npmjs.com/package/redux-json-api) / [redux-api](https://www.npmjs.com/package/redux-api)
+    * State
+      * [normalizr](https://www.npmjs.com/package/normalizr)
+      * Immutalbe - see _[Universal Utility Libraries](#universal-utility-libraries) > Standard Library Extensions > FP > Immutable_
+      * [redux-immutable](https://www.npmjs.com/package/redux-immutable)
+      * [redux-persist](https://www.npmjs.com/package/redux-persist)
+      * [redux-undo](https://www.npmjs.com/package/redux-undo)
+      * [redux-reset](https://www.npmjs.com/package/redux-reset)
+    * UI Patterns
+      * [redux-form](https://redux-form.com/)
+      * [react-block-ui](https://www.npmjs.com/package/react-block-ui) / [react-redux-loading-bar](https://www.npmjs.com/package/react-redux-loading-bar)
+      * [react-notification-system-redux](https://www.npmjs.com/package/react-notification-system-redux) / [react-redux-toastr](https://www.npmjs.com/package/react-redux-toastr)
+      * [redux-optimistic-ui](https://www.npmjs.com/package/redux-optimistic-ui)
+    * App Behaviours
+      * [redux-auth-wrapper](https://www.npmjs.com/package/redux-auth-wrapper)
+      * [react-intl-redux](https://www.npmjs.com/package/react-intl-redux)
       * [Redux Search](https://www.npmjs.com/package/redux-search)
-    * Store
-      * [Reselect](https://www.npmjs.com/package/reselect)
-      * [Normalizr](https://www.npmjs.com/package/normalizr)
-      * [Redux Persist](https://www.npmjs.com/package/redux-persist)
-    * Actions
-      * [Redux Actions](https://www.npmjs.com/package/redux-actions)
-      * [Redux Thunk](https://github.com/gaearon/redux-thunk), [Redux Promise Middleware](https://www.npmjs.com/package/redux-promise-middleware)
-      * [Redux Observable](https://redux-observable.js.org/) / [Redux Saga](https://redux-saga.js.org/)
+    * Development
+      * [redux-devtools-extension](https://www.npmjs.com/package/redux-devtools-extension)
+      * [redux-logger](https://www.npmjs.com/package/redux-logger)
+      * Testing - see _[Testing](#testing) > Web Testing > Integration Testing_
   * [MobX](https://mobx.js.org)
   * [Baobab](https://www.npmjs.com/package/baobab) / [Freezer](https://www.npmjs.com/package/freezer-js)
-* API
+* API / Data Source
   * [GraphQL](http://graphql.org/)
     * Learning
-      * [Learn GraphQL](https://learngraphql.com)
       * [Queries and Mutations](http://graphql.org/learn/queries/)
-      * Playground - [GraphQLHub](https://www.graphqlhub.com/)
-    * [React Apollo](http://dev.apollodata.com/react/), [Learn Apollo](https://www.learnapollo.com/)
+      * Playground - [GraphQLHub](https://www.graphqlhub.com/), [Explore GraphQL](https://www.graphql.com/tutorials/)
+    * State Management
+      * [Apollo Client](https://www.apollographql.com/client/)
+      * [redux-source](https://github.com/dexteryy/Project-WebCube/tree/master/packages/redux-source) (Author's own project)
+    * [graphql-anywhere](https://www.npmjs.com/package/graphql-anywhere)
+    * [graphql-tools](http://dev.apollodata.com/tools/graphql-tools/index.html)
 * Offline First
   * Learning
     * [Designing Offline-First Web Apps](https://alistapart.com/article/offline-first)
     * [Say Hello to Offline First](http://hood.ie/blog/say-hello-to-offline-first.html), \
       [Offline First and the Circle Of Web](http://hood.ie/blog/offline-first-and-the-circle-of-web.html), [Part II: Breaking the Circle](http://hood.ie/blog/offline-first-and-the-circle-of-web-part-ii-breaking-the-circle.html)
 * Routing
-  * [React Router](https://reacttraining.com/react-router/), [React Router Redux](https://www.npmjs.com/package/react-router-redux)
+  * [React Router](https://reacttraining.com/react-router/)
+  * [Connected React Router](https://github.com/supasate/connected-react-router)
   * [React Helmet](https://www.npmjs.com/package/react-helmet)
 * i18n
   * [React Intl](https://github.com/yahoo/react-intl) / [React i18next](https://react.i18next.com)
   * [React Intl Redux](https://www.npmjs.com/package/react-intl-redux)
-* Server-side Rendering
-  * see _[Tooling > Workflow](#workflow) > Deployment > Publishing App_
-* Monitoring
-  * [React GA](https://www.npmjs.com/package/react-ga)
-  * [Redux Raven Middleware](https://www.npmjs.com/package/redux-raven-middleware)
-  * [Redux Segment](https://www.npmjs.com/package/redux-segment)
+* Monitoring / Error Capture
+  * [react-ga](https://www.npmjs.com/package/react-ga)
+  * [redux-segment](https://www.npmjs.com/package/redux-segment)
+  * [redux-raven-middleware](https://www.npmjs.com/package/redux-raven-middleware) / [raven-for-redux](https://www.npmjs.com/package/raven-for-redux)
+  * [redux-catch](https://www.npmjs.com/package/redux-catch)
+  * [redux-beacon](https://www.npmjs.com/package/redux-beacon)
   * Services - see _[Tooling > Workflow](#workflow) > Monitoring_
 * Debugging
   * [why-did-you-update](https://www.npmjs.com/package/why-did-you-update)
+* Server-side Rendering
+  * see _[Tooling > Workflow](#workflow) > Deployment > Publishing App_
+* Static Web
+  * [JAMstack](https://jamstack.org/)
+  * see _[Tooling > Workflow](#workflow) > Deployment > Publishing App_
 * Scaffold / Boilerplate / Generator
-  * [create-react-app](https://github.com/facebookincubator/create-react-app)
-  * [react-starter-kit](https://github.com/kriasoft/react-starter-kit) / [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate)
-  * [angular-cli](https://cli.angular.io/)
-  * [vue-cli](https://www.npmjs.com/package/vue-cli)
+  * [create-react-app](https://github.com/facebookincubator/create-react-app) / [angular-cli](https://cli.angular.io/) / [vue-cli](https://www.npmjs.com/package/vue-cli)
+  * [Next.js](https://github.com/zeit/next.js)
+  * [webcube](https://github.com/dexteryy/Project-WebCube) (Author's own project)
+  * [Starter Kits Recommended by the React Team](https://reactjs.org/community/starter-kits.html)
   * [JavaScript Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
+  * Static Site Generator - [Gatsby](https://www.gatsbyjs.org/) / [Metalsmith](http://www.metalsmith.io/) / [Hexo](https://hexo.io/) / [Assemble](http://assemble.io/)
 * GUI Architectures
   * Comparison
     * [Scaling Isomorphic JavaScript Code](https://blog.nodejitsu.com/scaling-isomorphic-javascript-code/)
@@ -1069,17 +1174,18 @@ A Subset for __Architecture and Infrastructure__
 ### UI Toolkits
 
 * CSS
-  * [Bulma](http://bulma.io/)
+  * [Skeleton.css](http://getskeleton.com/)
   * [Tachyons](http://tachyons.io/)
+  * [Bulma](http://bulma.io/)
   * [Material Components for the web](https://github.com/material-components/material-components-web)
   * [WeUI](https://github.com/weui/weui)
   * [MJML](https://mjml.io/) / [Foundation for Emails 2](http://foundation.zurb.com/emails.html)
 * React
-  * [Material-UI](http://www.material-ui.com) / [React Toolbox](http://react-toolbox.com/)
-  * [Semantic UI React](https://react.semantic-ui.com)
   * [Reactstrap](https://reactstrap.github.io/) / [React Bootstrap](https://www.npmjs.com/package/react-bootstrap)
-  * [React Foundation](https://react.foundation/)
+  * [Material-UI](http://www.material-ui.com) / [React Toolbox](http://react-toolbox.com/)
   * [Ant Design](https://ant.design/) / [Ant Design Mobile](https://mobile.ant.design/)
+  * [Semantic UI React](https://react.semantic-ui.com)
+  * [React Foundation](https://react.foundation/)
   * [Blueprint](http://blueprintjs.com/)
   * [Grommet](https://grommet.github.io/)
   * [Elemental UI](http://elemental-ui.com/)
@@ -1104,15 +1210,14 @@ A Subset for __Architecture and Infrastructure__
   * [Buttons](http://unicorn-ui.com/buttons/)
   * Indicators - [React Ladda](https://www.npmjs.com/package/react-ladda) / [Ladda](http://lab.hakim.se/ladda/) / [React Progress Button](https://www.npmjs.com/package/react-progress-button)
 * Accordion
-  * [React Sanfona](https://www.npmjs.com/package/react-sanfona)
-  * [React Collapse](https://www.npmjs.com/package/react-collapse)
+  * [React Collapse](https://www.npmjs.com/package/react-collapse) / [React Sanfona](https://www.npmjs.com/package/react-sanfona)
 * Picker
   * [React Tabs](https://www.npmjs.com/package/react-tabs)
   * [React Select](http://jedwatson.github.io/react-select/)
   * [React Radio Group](https://www.npmjs.com/package/react-radio-group)
   * [RC Slider](https://www.npmjs.com/package/rc-slider) / [React Slider](https://www.npmjs.com/package/react-slider) / [React Input Range](https://www.npmjs.com/package/react-input-range)
   * [React Color](http://casesandberg.github.io/react-color/)
-  * [React Datepicker](https://hacker0x01.github.io/react-datepicker/) / [React Datetime](https://www.npmjs.com/package/react-datetime) / [React Day Picker](http://react-day-picker.js.org/) / [React Dates](https://www.npmjs.com/package/react-dates) / [Pikaday](https://www.npmjs.com/package/pikaday)
+  * [React Dates](https://www.npmjs.com/package/react-dates) / [React Datepicker](https://hacker0x01.github.io/react-datepicker/) / [React Day Picker](http://react-day-picker.js.org/) / [Pikaday](https://www.npmjs.com/package/pikaday) / [React Datetime](https://www.npmjs.com/package/react-datetime)
 * Input
   * [React Toggle](https://www.npmjs.com/package/react-toggle)
   * [React Input Autosize](https://www.npmjs.com/package/react-input-autosize), [React Textarea Autosize](https://www.npmjs.com/package/react-textarea-autosize)
@@ -1122,8 +1227,8 @@ A Subset for __Architecture and Infrastructure__
 * Form
   * [React JSON Schema Form](https://www.npmjs.com/package/react-jsonschema-form)
 * Overlay
+  * [React Modal](https://www.npmjs.com/package/react-modal) / [SweetAlert2](https://www.npmjs.com/package/sweetalert2) / [vex](https://www.npmjs.com/package/vex-js)
   * [React Overlays](https://www.npmjs.com/package/react-overlays)
-  * [React Modal](https://www.npmjs.com/package/react-modal) / [vex](https://www.npmjs.com/package/vex-js) / [SweetAlert2](https://www.npmjs.com/package/sweetalert2)
   * [React Notification System](https://github.com/igorprado/react-notification-system) / [react-notification-system-redux](https://www.npmjs.com/package/react-notification-system-redux) /\
     [React Redux Toastr](https://www.npmjs.com/package/react-redux-toastr) / [React Notification](https://www.npmjs.com/package/react-notification) / [React sAlert](https://www.npmjs.com/package/react-s-alert) / [Notie](https://www.npmjs.com/package/notie)
   * Drawer - [React Burger Menu](http://negomi.github.io/react-burger-menu/) / [React Sidebar](https://www.npmjs.com/package/react-sidebar) / [React Dock](https://www.npmjs.com/package/react-dock)
@@ -1132,17 +1237,20 @@ A Subset for __Architecture and Infrastructure__
 * Content
   * Carousel - [React Slick](https://www.npmjs.com/package/react-slick) / [Nuka Carousel](https://www.npmjs.com/package/nuka-carousel)
   * [React Paginate](https://www.npmjs.com/package/react-paginate)
+  * [React Rating](https://www.npmjs.com/package/react-rating)
   * List / Table - [React Virtualized](https://www.npmjs.com/package/react-virtualized) / [React Table](https://www.npmjs.com/package/react-table) / [React List](https://www.npmjs.com/package/react-list)
   * Spreadsheet - [React Data Grid](http://adazzle.github.io/react-data-grid/) / [React Handsontable](https://www.npmjs.com/package/react-handsontable) / [React Datasheet](https://nadbm.github.io/react-datasheet/)
-  * TreeView - [React TreeView](https://www.npmjs.com/package/react-treeview) / [React Treebeard](https://www.npmjs.com/package/react-treebeard)
+  * TreeView - [React Treebeard](https://www.npmjs.com/package/react-treebeard) / [React TreeView](https://www.npmjs.com/package/react-treeview)
   * JSON Viewer - [React JSON Tree](https://www.npmjs.com/package/react-json-tree)
   * [React QR Code](https://www.npmjs.com/package/qrcode.react)
   * Email Table - [Oy Vey](https://www.npmjs.com/package/oy-vey)
 * Editor
   * [Draft.js](https://draftjs.org/)
     * [Awesome Draft.js](https://github.com/nikgraf/awesome-draft-js)
+  * [Slate](https://github.com/ianstormtaylor/slate)
   * [React Quill](https://www.npmjs.com/package/react-quill) / [Quill](https://quilljs.com/)
-  * [React Ace](https://www.npmjs.com/package/react-ace) / [React Codemirror](https://www.npmjs.com/package/react-codemirror)
+  * [React Monaco Editor](https://www.npmjs.com/package/react-monaco-editor) / [React Ace](https://www.npmjs.com/package/react-ace) / [React Codemirror](https://www.npmjs.com/package/react-codemirror)
+    * [Monaco Editor](https://microsoft.github.io/monaco-editor/) / [Ace](https://ace.c9.io/) / [CodeMirror](https://codemirror.net/)
   * [React Markdown](https://www.npmjs.com/package/react-markdown)
   * [React Syntax Highlighter](https://www.npmjs.com/package/react-syntax-highlighter) / [Highlight.js](https://www.npmjs.com/package/highlight.js)
 * Widget
@@ -1162,7 +1270,7 @@ A Subset for __Architecture and Infrastructure__
 ### UX Libraries
 
 * Drag & Drop
-  * [React DnD](https://react-dnd.github.io/react-dnd) / [Dragula](https://www.npmjs.com/package/dragula)
+  * [React DnD](https://react-dnd.github.io/react-dnd) / [React Draggable](https://www.npmjs.com/package/react-draggable)
   * [React Sortable HOC ](https://www.npmjs.com/package/react-sortable-hoc) / [Sortable](https://github.com/RubaXa/Sortable)
   * [React Dropzone](https://www.npmjs.com/package/react-dropzone) / [DropzoneJS](http://www.dropzonejs.com/)
   * [GSAP - Draggable](https://greensock.com/draggable)
@@ -1170,7 +1278,7 @@ A Subset for __Architecture and Infrastructure__
   * [Hammer.js](http://hammerjs.github.io/) / [Interact.js](http://interactjs.io/) / [ZingTouch](https://zingchart.github.io/zingtouch/) / [AlloyFinger](https://github.com/AlloyTeam/AlloyFinger)
     * [Gestures Patterns](https://material.io/guidelines/patterns/gestures.html)
     * [React HammerJS](https://www.npmjs.com/package/react-hammerjs)
-  * [React Swipeable Views](http://oliviertassinari.github.io/react-swipeable-views/) / [React Swipeable](https://www.npmjs.com/package/react-swipeable) / [Swiper](http://idangero.us/swiper)
+  * [React Swipeable Views](https://github.com/oliviertassinari/react-swipeable-views) / [React Swipeable](https://www.npmjs.com/package/react-swipeable) / [Swiper](http://idangero.us/swiper)
 * Scrolling
   * Viewport and Elements
     * [React Waypoint](https://www.npmjs.com/package/react-waypoint) / [Waypoints](https://www.npmjs.com/package/waypoints), \
@@ -1197,7 +1305,7 @@ A Subset for __Architecture and Infrastructure__
   * [React Tether](https://www.npmjs.com/package/react-tether) / [Tether.js](http://tether.io/) / [Popper.js](https://popper.js.org/), \
     [React Tooltip](https://www.npmjs.com/package/react-tooltip) / [Tether Tooltip](http://github.hubspot.com/tooltip/docs/welcome/) / [Tippy.js](https://atomiks.github.io/tippyjs/)
 * Tour
-  * [React Joyride](https://www.npmjs.com/package/react-joyride) / [Intro.js](http://introjs.com/) / [tether-shepherd](http://github.hubspot.com/shepherd/docs/welcome/) / [Chardin.js](https://www.npmjs.com/package/chardin.js)
+  * [React Joyride](https://www.npmjs.com/package/react-joyride) / [Intro.js](http://introjs.com/) / [tether-shepherd](https://www.npmjs.com/package/tether-shepherd) / [Chardin.js](https://www.npmjs.com/package/chardin.js)
 * Accessiblity
   * [React HotKeys](https://www.npmjs.com/package/react-hotkeys)
   * [React A11y](https://www.npmjs.com/package/react-a11y)
@@ -1209,25 +1317,24 @@ A Subset for __Architecture and Infrastructure__
 * Animation
   * Effects
     * [Animate.css](https://daneden.github.io/animate.css/) / [Magic Animations](https://minimamente.com/example/magic_animations/) / [All Animation CSS3](http://all-animation.github.io/) / [Motion CSS](http://pavlyukpetr.com/awesome/) / [Effeckt.css](http://h5bp.github.io/Effeckt.css/) / [CSS3 Animation Cheat Sheet](http://justinaguilar.com/animations/index.html)
-      * [Animate Components](https://www.npmjs.com/package/animate-components) / [React Animations](https://www.npmjs.com/package/react-animations)
+      * [React Animations](https://www.npmjs.com/package/react-animations) / [Animate Components](https://www.npmjs.com/package/animate-components) / [rc-animate](https://www.npmjs.com/package/rc-animate)
     * [Hover.css](http://ianlunn.github.io/Hover/)
     * [Transformicons](http://www.transformicons.com/) / [Hamburgers](https://www.npmjs.com/package/hamburgers)
     * Loading
       * [Loaders.css](https://connoratherton.com/loaders) / [SpinKit](https://github.com/tobiasahlin/SpinKit) / [Spin.js](http://spin.js.org/)
       * [React Spinkit](https://www.npmjs.com/package/react-spinkit) / [React Loaders](https://www.npmjs.com/package/react-loaders) / [Halogen](http://madscript.com/halogen/) / [React Spinjs](https://www.npmjs.com/package/react-spinjs)
+    * Queue
+      * [React FLIP Move](https://www.npmjs.com/package/react-flip-move) / [rc-queue-anim](https://www.npmjs.com/package/rc-queue-anim)
+    * Characters
+      * [React Typist](https://www.npmjs.com/package/react-typist) / [rc-texty](https://www.npmjs.com/package/rc-texty)
+      * [React CountUp](https://www.npmjs.com/package/react-countup) / [CountUp.js](https://www.npmjs.com/package/countup.js)
+  * Parallax / Scrolling
+    * [ScrollReveal.js](https://www.npmjs.com/package/scrollreveal) / [ScrollMagic](http://scrollmagic.io/) / [Rellax](https://www.npmjs.com/package/rellax)
+    * [rc-scroll-anim](https://www.npmjs.com/package/rc-scroll-anim) / [React Springy Parallax](https://www.npmjs.com/package/react-springy-parallax)
+    * Orientation - [Parallax](https://www.npmjs.com/package/parallax-js)
   * Easing
     * [d3-ease](https://www.npmjs.com/package/d3-ease) / [tween-functions](https://www.npmjs.com/package/tween-functions)
     * [bezier-easing](https://www.npmjs.com/package/bezier-easing)
-  * Scrolling
-    * [ScrollReveal.js](https://www.npmjs.com/package/scrollreveal) / [ScrollMagic](http://scrollmagic.io/)
-  * Parallax
-    * Scrolling - [Rellax](https://www.npmjs.com/package/rellax) / [React Springy Parallax](https://www.npmjs.com/package/react-springy-parallax)
-    * Orientation - [Parallax](https://www.npmjs.com/package/parallax-js)
-  * FLIP
-    * [React FLIP Move](https://www.npmjs.com/package/react-flip-move)
-  * Characters
-    * [React Typist](https://www.npmjs.com/package/react-typist)
-    * [React CountUp](https://www.npmjs.com/package/react-countup) / [CountUp.js](https://www.npmjs.com/package/countup.js)
   * Keyframe / Transition
     * Style
       * [Velocity.js](http://velocityjs.org/) / [Velocity React](https://www.npmjs.com/package/velocity-react) / [Dynamics.js](http://dynamicsjs.com/)
@@ -1247,12 +1354,13 @@ A Subset for __Architecture and Infrastructure__
       * [GSAP - TimelineLite](https://greensock.com/timelinelite), [GSAP - TimelineMax](https://greensock.com/timelinemax)
         * [React GSAP Enhancer](https://www.npmjs.com/package/react-gsap-enhancer)
   * Motion / Curved Path
-    * Shape - [mo-js](http://mojs.io/)
     * SVG - [Vivus](http://maxwellito.github.io/vivus/)
-    * [Ant Motion](https://motion.ant.design/)
+    * Shape - [mo-js](http://mojs.io/)
+    * [rc-tween-one](https://www.npmjs.com/package/rc-tween-one)
 * 2D
   * Canvas
-    * [Pixi.js](http://www.pixijs.com/) / [Fabric.js](https://github.com/kangax/fabric.js) / [React Konva](https://www.npmjs.com/package/react-konva)
+    * [Pixi.js](http://www.pixijs.com/) / [Fabric.js](https://github.com/kangax/fabric.js)
+    * [React Pixi](https://reactpixi.org/) / [ReactPixiFiber](https://github.com/michalochman/react-pixi-fiber) / [React Konva](https://www.npmjs.com/package/react-konva)
     * Isometric - [obelisk.js](https://www.npmjs.com/package/obelisk.js)
     * Creative - [p5.js](https://www.npmjs.com/package/p5)
     * Fonts - [opentype.js](https://opentype.js.org/)
@@ -1264,9 +1372,9 @@ A Subset for __Architecture and Infrastructure__
   * WebGL
     * [Three.js](https://threejs.org/) / [React Three](https://github.com/Izzimach/react-three) / [React Three Renderer](https://github.com/toxicFork/react-three-renderer)
     * [Babylon.js](http://www.babylonjs.com/)
-    * [stackgl](http://stack.gl/)
+    * [stackgl](https://github.com/stackgl)
     * [aframe-react](https://www.npmjs.com/package/aframe-react) / [A-Frame](https://aframe.io/)
-    * [React VR](https://facebook.github.io/react-vr/)
+    * [React 360](https://facebook.github.io/react-360/)
   * Physics
     * [cannon.js](https://github.com/schteppe/cannon.js) / [ammo.js](https://github.com/kripken/ammo.js) / [oimo.js](https://github.com/lo-th/Oimo.js/)
 * Data Visualization
@@ -1409,6 +1517,7 @@ A Subset for __Architecture and Infrastructure__
     Microsoft's [API Design Best Practices](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design), [REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md), \
     [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api), \
     [Principles of good RESTful API Design](https://codeplanet.io/principles-good-restful-api-design/)
+  * [REST API Error Codes 101](http://blog.restcase.com/rest-api-error-codes-101/)
   * [Introducing JSON](http://json.org/)
 * Microservices
   * [A pattern language for microservices](http://microservices.io/patterns/index.html)
@@ -1423,7 +1532,7 @@ A Subset for __Architecture and Infrastructure__
   * API Gateway
     * [Pattern: API Gateway / Backend for Front-End](http://microservices.io/patterns/apigateway.html)
     * [Why an API Gateway?](https://www.nginx.com/blog/microservices-api-gateways-part-1-why-an-api-gateway/)
-    * [Moving from REST to GraphQL](https://medium.com/@frikille/moving-from-rest-to-graphql-e3650b6f5247) / [From REST to GraphQL](https://0x2a.sh/from-rest-to-graphql-b4e95e94c26b)
+    * [Moving from REST to GraphQL](https://medium.com/@frikille/moving-from-rest-to-graphql-e3650b6f5247) / [From REST to GraphQL](https://0x2a.sh/from-rest-to-graphql-b4e95e94c26b) / [GraphQL vs. REST](https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b)
     * [Serverless and GraphQL: A Perfect Match for the New Cloud Paradigm](https://thenewstack.io/serverless-graphql-perfect-match-new-cloud-paradigm/)
   * Serverless
     * [Pattern: Serverless deployment](http://microservices.io/patterns/deployment/serverless-deployment.html)
@@ -1439,7 +1548,6 @@ A Subset for __Architecture and Infrastructure__
     * Azure's Cloud Fundamentals - [Architecture styles](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/), [Pillars of software quality](https://docs.microsoft.com/en-us/azure/architecture/guide/pillars), [Design principles](https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/index)
   * Static
     * [Static Content Hosting](https://docs.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting), [Valet Key](https://docs.microsoft.com/en-us/azure/architecture/patterns/valet-key), [Content Delivery Network](https://docs.microsoft.com/en-us/azure/architecture/best-practices/cdn)
-    * [Defining Static Web Apps](https://staticapps.org/articles/defining-static-web-apps/)
   * Queue / Jobs
     * [Queue-Based Load Leveling](https://docs.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling), [Competing Consumers](https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers), [Priority Queue](https://docs.microsoft.com/en-us/azure/architecture/patterns/priority-queue)
     * [Background jobs](https://docs.microsoft.com/en-us/azure/architecture/best-practices/background-jobs)
@@ -1471,8 +1579,9 @@ A Subset for __Architecture and Infrastructure__
     * [The OAuth Bible](http://oauthbible.com/)
   * [Tokens used by Auth0](https://auth0.com/docs/tokens)
     * [Understanding Refresh Tokens](https://auth0.com/learn/refresh-tokens/)
-  * [How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
-  * [You Wouldn't Base64 a Password - Cryptography Decoded](https://paragonie.com/blog/2015/08/you-wouldnt-base64-a-password-cryptography-decoded)
+  * [How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/), \
+    [You Wouldn't Base64 a Password - Cryptography Decoded](https://paragonie.com/blog/2015/08/you-wouldnt-base64-a-password-cryptography-decoded), \
+    [How to securely hash passwords?](https://security.stackexchange.com/a/31846)
   * [Weak Signature Algorithm](https://developer.mozilla.org/en-US/docs/Web/Security/Weak_Signature_Algorithm)
 * Security
   * [Security Guide for Developers](https://github.com/FallibleInc/security-guide-for-developers)
@@ -1516,12 +1625,13 @@ A Subset for __Architecture and Infrastructure__
           * [express-jwt](https://www.npmjs.com/package/express-jwt) / [passport.js](http://passportjs.org/)
         * Proxy
           * [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) / [rocky](https://www.npmjs.com/package/rocky)
-          * [graphql-server-express](http://dev.apollodata.com/tools/graphql-server/setup.html#graphqlOptions) / [express-graphql](https://www.npmjs.com/package/express-graphql)
+        * GraphQL
+          * [apollo-server-express](https://www.apollographql.com/docs/apollo-server/servers/express.html) / [express-graphql](https://www.npmjs.com/package/express-graphql)
     * Rich Framework
       * Configuration - [Hapi](https://hapijs.com/)
       * Realtime - [Feathers](https://feathersjs.com/)
   * Microservices
-    * [Micro](https://github.com/zeit/micro) / [Seneca](http://senecajs.org/) / [StdLib](https://stdlib.com/)
+    * [Micro](https://www.npmjs.com/package/micro) / [Seneca](http://senecajs.org/) / [StdLib](https://stdlib.com/)
   * Serverless
     * [Serverless Framework](https://github.com/serverless/serverless)
     * [IronFunctions](https://github.com/iron-io/functions)
@@ -1530,8 +1640,12 @@ A Subset for __Architecture and Infrastructure__
 * GraphQL
   * [Schemas and Types](http://graphql.org/learn/schema/)
     * [GraphQL Schema Language Cheat Sheet](https://wehavefaces.net/graphql-shorthand-notation-cheatsheet-17cd715861b6)
-  * [graphql-tools](http://dev.apollodata.com/tools/graphql-tools/index.html)
-  * [graphql-anywhere](https://www.npmjs.com/package/graphql-anywhere)
+  * [The Fullstack Tutorial for GraphQL](https://www.howtographql.com/)
+  * Server
+    * [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+    * [graphql-tools](http://dev.apollodata.com/tools/graphql-tools/index.html)
+  * Resolvers
+    * [graphql-resolvers](https://github.com/lucasconstantino/graphql-resolvers)
 * DocGen + CodeGen
   * [API Blueprint](https://apiblueprint.org/) / [Swagger](http://swagger.io/) / [RAML](http://raml.org/)
     * Parser - [Protagonist](https://www.npmjs.com/package/protagonist) / [Drafter](https://www.npmjs.com/package/drafter)
@@ -1542,10 +1656,10 @@ A Subset for __Architecture and Infrastructure__
     * [JSON Schema Based Editor](https://github.com/jdorn/json-editor)
   * See _[Tooling > Documentation](#documentation)_
 * Scaffold / Boilerplate / Generator
-  * [nodecube](https://github.com/dexteryy/nodecube) (author's own project)
   * [Nodal](https://github.com/keithwhor/nodal)
   * [Fuge](http://fuge.io/)
   * [Botpress](https://github.com/botpress/botpress)
+  * [nodecube](https://github.com/dexteryy/Project-WebCube) (Author's own project)
 
 \>\> Return to [Table of Contents](#table-of-contents)
 
@@ -1580,6 +1694,7 @@ A Subset for __Architecture and Infrastructure__
   * [passwordless](https://passwordless.net/)
   * [oauth](https://www.npmjs.com/package/oauth)
   * OAuth Providers - [hello.js](http://adodson.com/hello.js/) / [grant](https://www.npmjs.com/package/grant)
+  * [svg-captcha](https://github.com/lemonce/svg-captcha)
 * Storage
   * NOSQL
     * Redis Client - [ioredis](https://github.com/luin/ioredis)
@@ -1598,8 +1713,8 @@ A Subset for __Architecture and Infrastructure__
   * HTML Parsing - [parse5](http://inikulin.github.io/parse5/index.html) / [htmlparser2](https://www.npmjs.com/package/htmlparser2)
   * Extract Article - [read-art](https://www.npmjs.com/package/read-art) / [node-readability](https://www.npmjs.com/package/node-readability)
   * Extract Metadata - [url-unshort](https://www.npmjs.com/package/url-unshort) / [embedza](https://www.npmjs.com/package/embedza)
-  * Web Crawler - [simplecrawler](https://www.npmjs.com/package/simplecrawler) / [x-ray](https://www.npmjs.com/package/x-ray) / [scrape-it](https://www.npmjs.com/package/scrape-it)
-  * Headless Browsers - see _[Tooling > Testing](#testing) > Web Testing > Headless Browsers_
+  * Web Crawler - [simplecrawler](https://www.npmjs.com/package/simplecrawler) / [x-ray](https://www.npmjs.com/package/x-ray) / [scrape-it](https://www.npmjs.com/package/scrape-it) / [Headless Chrome Crawler](https://github.com/yujiosaka/headless-chrome-crawler)
+  * Headless Browsers Automation - see _[Tooling > Testing](#testing) > Web Testing > Functional Testing > Headless Browser Automation_
 * Images
   * Canvas / WebGL API - [node-canvas](https://www.npmjs.com/package/canvas) / [gl](https://www.npmjs.com/package/gl)
   * Image Manipulation - [gm](https://www.npmjs.com/package/gm) / [sharp](http://sharp.dimens.io/)
@@ -1758,12 +1873,23 @@ A Subset for __Architecture and Infrastructure__
   * [Jest](https://facebook.github.io/jest/)
   * [AVA](https://github.com/avajs/ava)
   * [Mocha](https://mochajs.org/) + [Chai](http://chaijs.com/)
+  * [Cypress](https://www.cypress.io/)
   * [Karma](https://karma-runner.github.io)
 * Web Testing
   * Integration Testing
-    * [Enzyme](http://airbnb.io/enzyme/)
-  * Functional Testing
-    * Headless Browser Automation - [Selenium WebDriverJS](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs) / [WebDriverIO](http://webdriver.io/) / [Nightwatch.js](http://nightwatchjs.org/) / [Nightmare](https://github.com/segmentio/nightmare) / [CasperJS](http://casperjs.org/)
+    * Components - [Enzyme](http://airbnb.io/enzyme/)
+    * Reducers
+      * [redux-test-utils](https://www.npmjs.com/package/redux-test-utils) + [enzyme-redux](https://www.npmjs.com/package/enzyme-redux)
+      * [redux-testkit](https://www.npmjs.com/package/redux-testkit)
+  * Functional Testing / E2E Testing
+    * Headless Browser Automation
+      * DevTools API
+        * Headless Chrome - [Puppeteer](https://github.com/GoogleChrome/puppeteer) / [Chromy](https://www.npmjs.com/package/chromy)
+          * [End-to-end Tests that Don’t Suck with Puppeteer](https://ropig.com/blog/end-end-tests-dont-suck-puppeteer/)
+          * AWS Lambda - [Chromeless](https://www.npmjs.com/package/chromeless)
+        * electron-prebuilt - [Nightmare](https://github.com/segmentio/nightmare)
+      * WebDriver API - [Selenium WebDriverJS](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs) / [WebDriverIO](http://webdriver.io/) / [Nightwatch.js](http://nightwatchjs.org/) / [CasperJS](http://casperjs.org/) / [Protractor](http://www.protractortest.org/)
+          * AWS Lambda - [Lambdium](https://github.com/smithclay/lambdium)
     * Cloud - [BrowserStack Automate](https://www.browserstack.com/automate) / [Sauce Labs](https://saucelabs.com/open-source#automated-testing-platform)
   * Visual Testing
     * [React Storybook](https://storybooks.js.org/) / [React Cosmos](https://github.com/react-cosmos/react-cosmos)
@@ -1775,6 +1901,7 @@ A Subset for __Architecture and Infrastructure__
       * Chromium - [Headless Chrome/Chromium](https://developers.google.com/web/updates/2017/04/headless-chrome)
       * Chromium + Node.js - [electron-prebuilt](https://www.npmjs.com/package/electron)
       * WebKit - [PhantomJS](http://phantomjs.org/)
+        * [Why you should stop using PhantomJS](https://blog.phantombuster.com/why-you-should-stop-using-phantomjs-f5c5f2717209)
       * Gecko - [SlimerJS](https://slimerjs.org/)
     * In-memory X11 Display Server
       * [xvfb](https://en.wikipedia.org/wiki/Xvfb) - [xvfb-run](http://manpages.ubuntu.com/manpages/trusty/man1/xvfb-run.1.html) / [headless](https://www.npmjs.com/package/headless)
@@ -1822,10 +1949,7 @@ A Subset for __Architecture and Infrastructure__
 ### Documentation
 
 * JS
-  * [JSDoc3](http://usejsdoc.org/)
-    * [documentation.js](http://documentation.js.org/)
-    * [jsdox](http://jsdox.org/)
-    * [dox](https://www.npmjs.com/package/dox)
+  * [JSDoc3](http://usejsdoc.org/) + [documentation.js](http://documentation.js.org/) / [jsdox](http://jsdox.org/) / [dox](https://www.npmjs.com/package/dox)
   * [ESDoc](https://esdoc.org/)
   * [React DocGen](https://www.npmjs.com/package/react-docgen)
 * API
@@ -1834,11 +1958,13 @@ A Subset for __Architecture and Infrastructure__
 * CLI
   * [Ronn](http://rtomayko.github.io/ronn/)
   * [Docopt](http://docopt.org/)
-* CSS / Style Guide
-  * [KSS (Knyle Style Sheets)](http://warpspire.com/kss/)
+* Style Guide
+  * Markdown + JSX - [docz](https://www.docz.site/)
+  * JS - [Storybook](https://storybook.js.org/)
+  * JS comments - [React Styleguidist](https://react-styleguidist.js.org/)
+  * CSS comments - [KSS (Knyle Style Sheets)](http://warpspire.com/kss/)
     * [kss-node](http://kss-node.github.io/kss-node/)
     * [SC5 Style Guide Generator](http://styleguide.sc5.io/)
-  * [React Styleguidist](https://react-styleguidist.js.org/)
 * Writing
   * Static Web Generator - [GitBook](https://www.npmjs.com/package/gitbook) / [ReadMe](https://readme.io/)
   * Client-side Rendering - [Docute](https://docute.js.org) / [Docsify](https://docsify.js.org)
@@ -1852,18 +1978,21 @@ A Subset for __Architecture and Infrastructure__
     * [Setting up ES6](https://leanpub.com/setting-up-es6/read)
     * [Babel User Handbook](https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/user-handbook.md), [Babel Plugin Handbook](https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md)
     * Presets
-      * [Preset Env](https://github.com/babel/babel-preset-env)
+      * [Preset Env](https://babeljs.io/docs/en/next/babel-preset-env.html)
         * [Browserslist](https://github.com/ai/browserslist)
       * [Preset React](http://babeljs.io/docs/plugins/preset-react/)
       * [React Optimize](https://github.com/thejameskyle/babel-react-optimize)
     * Plugins
       * Proposals
-        * Shims - [Runtime Transform](http://babeljs.io/docs/plugins/transform-runtime/) / [Polyfill](http://babeljs.io/docs/usage/polyfill/)
+        * [Babel progress on ECMAScript proposals](https://github.com/babel/proposals)
+        * Shims - [@babel/polyfill](https://github.com/babel/babel/tree/master/packages/babel-polyfill) ([useBuiltIns](https://babeljs.io/docs/en/next/babel-preset-env.html#usebuiltins)) / [core-js](https://github.com/zloirock/core-js)
           * async/await - [fast-async](https://github.com/MatAtBread/fast-async) ([NoDent](https://www.npmjs.com/package/nodent))
         * [Stage 3](http://babeljs.io/docs/plugins/preset-stage-3/), [Stage 2](http://babeljs.io/docs/plugins/preset-stage-2/), [Stage 1](http://babeljs.io/docs/plugins/preset-stage-1/), [Stage 0](http://babeljs.io/docs/plugins/preset-stage-0/)
           * [Class properties](http://babeljs.io/docs/plugins/transform-class-properties/)
           * [Object rest spread](http://babeljs.io/docs/plugins/transform-object-rest-spread/)
-          * [Stage 2 Decorators](http://babeljs.io/docs/plugins/transform-decorators/) / [Legacy Decorator](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy)
+          * [Legacy Decorator](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy) / [Stage 2 Decorators](http://babeljs.io/docs/plugins/transform-decorators/)
+          * Dynamic Import- [Syntax](https://www.npmjs.com/package/babel-plugin-syntax-dynamic-import),  [For Node.js](https://www.npmjs.com/package/babel-plugin-dynamic-import-node)
+          * [Optional Chaining Operator](https://www.npmjs.com/package/babel-plugin-transform-optional-chaining)
       * Node.js
         * [add-module-exports](https://github.com/59naga/babel-plugin-add-module-exports)
         * [Root Import](https://github.com/entwicklerstube/babel-plugin-root-import) / [Webpack Alias](https://www.npmjs.com/package/babel-plugin-webpack-alias)
@@ -1875,21 +2004,21 @@ A Subset for __Architecture and Infrastructure__
       * Optimization
         * [transform-remove-console](https://www.npmjs.com/package/babel-plugin-transform-remove-console)
   * [TypeScript](http://www.typescriptlang.org/)
-    * [TypeScript: the missing introduction](https://toddmotto.com/typescript-the-missing-introduction)
+    * [TypeScript: the missing introduction](https://jameshenry.blog/typescript-the-missing-introduction/)
   * [PostCSS](https://github.com/postcss/postcss)
     * Standards
-      * [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNext](http://cssnext.io/)
-      * [image-set Polyfill](https://www.npmjs.com/package/postcss-image-set-polyfill)
+      * [Autoprefixer](https://github.com/postcss/autoprefixer)
+      * [CSSNext](http://cssnext.io/) / [postcss-preset-env](https://preset-env.cssdb.org/)
       * [Will Change](https://www.npmjs.com/package/postcss-will-change)
       * [Normalize](https://www.npmjs.com/package/postcss-normalize)
     * Utilities
       * [Utility Library](https://www.npmjs.com/package/postcss-utilities), [Rucksack](http://simplaio.github.io/)
       * [LostGrid](http://lostgrid.org/)
-      * [Quantity Queries](https://github.com/pascalduez/postcss-quantity-queries), [Initial](https://www.npmjs.com/package/postcss-initial)
-      * [Pxtorem](https://www.npmjs.com/package/postcss-pxtorem) / [Pixrem](https://www.npmjs.com/package/pixrem)
+      * [Quantity Queries](https://github.com/pascalduez/postcss-quantity-queries)
+      * [Easing Gradients](https://www.npmjs.com/package/postcss-easing-gradients)
+      * [Pxtorem](https://www.npmjs.com/package/postcss-pxtorem)
       * [Brand Colors](https://www.npmjs.com/package/postcss-brand-colors) / [Nippon Color](https://www.npmjs.com/package/postcss-nippon-color) / [Google Color](https://www.npmjs.com/package/postcss-google-color)
       * [Contrast](https://www.npmjs.com/package/postcss-contrast) / [Get Color](https://www.npmjs.com/package/postcss-get-color)
-      * [Easing Gradients](https://www.npmjs.com/package/postcss-easing-gradients)
     * Assets
       * [Assets](https://www.npmjs.com/package/postcss-assets)
       * [Inline SVG](https://www.npmjs.com/package/postcss-inline-svg), [SVGO](https://www.npmjs.com/package/postcss-svgo)
@@ -1901,54 +2030,80 @@ A Subset for __Architecture and Infrastructure__
   * [node-sass](https://www.npmjs.com/package/node-sass)
   * [PostHTML](https://www.npmjs.com/package/posthtml)
 * Loader / Builder / Bundler
-  * [Webpack](http://webpack.github.io/docs/)
+  * [Webpack](https://webpack.js.org/concepts/)
     * [webpack-howto](https://github.com/petehunt/webpack-howto)
       * [SurviveJS Webpack](https://survivejs.com/webpack/what-is-webpack/)
       * [webpack-blocks](https://github.com/andywer/webpack-blocks)
     * Loaders
-      * [babel-loader](https://www.npmjs.com/package/babel-loader) / [awesome-typescript-loader](https://www.npmjs.com/package/awesome-typescript-loader) / [vue-loader](https://www.npmjs.com/package/vue-loader)
+      * [babel-loader](https://www.npmjs.com/package/babel-loader), [ts-loader](https://www.npmjs.com/package/ts-loader) / [awesome-typescript-loader](https://www.npmjs.com/package/awesome-typescript-loader), [vue-loader](https://www.npmjs.com/package/vue-loader)
         * [imports-loader](https://www.npmjs.com/package/imports-loader)
+          * [Granular Shimming](https://webpack.js.org/guides/shimming/#granular-shimming)
+        * [exports-loader](https://webpack.js.org/loaders/exports-loader/)
+          * [Global Exports](https://webpack.js.org/guides/shimming/#global-exports)
       * [css-loader](https://www.npmjs.com/package/css-loader), [style-loader](https://www.npmjs.com/package/style-loader) / [isomorphic-style-loader](https://www.npmjs.com/package/isomorphic-style-loader)
-        * [postcss-loader](https://www.npmjs.com/package/postcss-loader), [scss-loader](https://www.npmjs.com/package/sass-loader)
+        * [postcss-loader](https://www.npmjs.com/package/postcss-loader), [scss-loader](https://www.npmjs.com/package/sass-loader), [less-loader](https://www.npmjs.com/package/less-loader)
         * [resolve-url-loader](https://www.npmjs.com/package/resolve-url-loader)
-      * [svg-react-loader](https://www.npmjs.com/package/svg-react-loader)
-      * [worker-loader](https://www.npmjs.com/package/worker-loader), [wasm-loader](https://www.npmjs.com/package/wasm-loader)
+      * [workerize-loader](https://www.npmjs.com/package/workerize-loader) / [worker-loader](https://www.npmjs.com/package/worker-loader)
       * [raw-loader](https://www.npmjs.com/package/raw-loader)
-        * [json-loader](https://www.npmjs.com/package/json-loader) / [json5-loader](https://www.npmjs.com/package/json5-loader)
-        * [handlebars-loader](https://www.npmjs.com/package/handlebars-loader), [html-loader](https://www.npmjs.com/package/html-loader)
+        * [html-loader](https://www.npmjs.com/package/html-loader)
+          * [markdown-loader](https://www.npmjs.com/package/markdown-loader) / [handlebars-loader](https://www.npmjs.com/package/handlebars-loader)
         * [shader-loader](https://www.npmjs.com/package/shader-loader) / [glslify-loader](https://www.npmjs.com/package/glslify-loader)
       * [image-webpack-loader](https://www.npmjs.com/package/image-webpack-loader) / [img-loader](https://www.npmjs.com/package/img-loader)
+      * [svg-react-loader](https://www.npmjs.com/package/svg-react-loader), [react-markdown-loader](https://www.npmjs.com/package/react-markdown-loader)
       * [url-loader](https://www.npmjs.com/package/url-loader), [svg-url-loader](https://www.npmjs.com/package/svg-url-loader)
       * [file-loader](https://www.npmjs.com/package/file-loader)
+      * [thread-loader](https://www.npmjs.com/package/thread-loader), [cache-loader](https://www.npmjs.com/package/cache-loader), [val-loader](https://www.npmjs.com/package/val-loader)
     * Plugins
-      * [Extract Text Plugin](https://www.npmjs.com/package/extract-text-webpack-plugin), [HTML Webpack Plugin](https://www.npmjs.com/package/html-webpack-plugin), [Copy Webpack Plugin](https://github.com/kevlened/copy-webpack-plugin)
-      * [Offline Plugin](https://www.npmjs.com/package/offline-plugin), [SW Precache Plugin](https://www.npmjs.com/package/sw-precache-webpack-plugin)
-      * [Define Plugin](https://webpack.js.org/plugins/define-plugin/)
-      * [Lodash Plugin](https://www.npmjs.com/package/lodash-webpack-plugin)
+      * [Extract Text Plugin](https://www.npmjs.com/package/extract-text-webpack-plugin), [Webpack Manifest Plugin](https://www.npmjs.com/package/webpack-manifest-plugin)
+      * [Copy Webpack Plugin](https://github.com/kevlened/copy-webpack-plugin), [Clean Webpack Plugin](https://www.npmjs.com/package/clean-webpack-plugin)
+      * [HTML Webpack Plugin](https://www.npmjs.com/package/html-webpack-plugin)
+        * [HTML Webpack Template](https://github.com/jaketrent/html-webpack-template)
+        * Plugins
+          * [Favicons](https://www.npmjs.com/package/favicons-webpack-plugin)
+          * [Harddisk](https://www.npmjs.com/package/html-webpack-harddisk-plugin)
+          * [Inline Source](https://www.npmjs.com/package/html-webpack-inline-source-plugin), [Preload](https://www.npmjs.com/package/preload-webpack-plugin)
+          * [Include Assets](https://www.npmjs.com/package/html-webpack-include-assets-plugin) + [Exclude Assets](https://www.npmjs.com/package/html-webpack-exclude-assets-plugin)
+          * [Inline Chunk Manifest](https://www.npmjs.com/package/inline-chunk-manifest-html-webpack-plugin)
+      * [Define Plugin](https://webpack.js.org/plugins/define-plugin/) / [Environment Plugin](https://webpack.js.org/plugins/environment-plugin/)
+      * [Provide Plugin](https://webpack.js.org/plugins/provide-plugin/)
+        * [Shimming Global](https://webpack.js.org/guides/shimming/)
+      * [Ignore Plugin](https://webpack.js.org/plugins/ignore-plugin/), [Watch Ignore Plugin](https://webpack.js.org/plugins/watch-ignore-plugin/)
+      * [Module Concatenation Plugin](https://webpack.js.org/plugins/module-concatenation-plugin/), [Lodash Plugin](https://www.npmjs.com/package/lodash-webpack-plugin)
+      * [UglifyJS Webpack Plugin](https://www.npmjs.com/package/uglifyjs-webpack-plugin) / [Babel Minify Webpack Plugin](https://www.npmjs.com/package/babel-minify-webpack-plugin)
+      * [Workbox Webpack Plugins](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin), [Offline Plugin](https://www.npmjs.com/package/offline-plugin)
       * [Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
+      * [Fork TS Checker Webpack Plugin](https://www.npmjs.com/package/fork-ts-checker-webpack-plugin), [HappyPack](https://www.npmjs.com/package/happypack)
   * [Rollup](https://rollupjs.org/)
     * [Webpack and Rollup: the same but different](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c)
 * Formatter
+  * ESLint with autofix feature - see Static Analysis
   * [Prettier](https://www.npmjs.com/package/prettier)
     * [prettier-eslint](https://www.npmjs.com/package/prettier-eslint)
-  * [Recast](https://www.npmjs.com/package/recast)
+  * Codemod - [Effective JavaScript Codemods](https://medium.com/@cpojer/effective-javascript-codemods-5a6686bb46fb)
     * [jscodeshift](https://www.npmjs.com/package/jscodeshift)
     * [react-codemod](https://www.npmjs.com/package/react-codemod)
+    * [Recast](https://www.npmjs.com/package/recast)
   * [stylefmt](https://www.npmjs.com/package/stylefmt)
 * Static Analysis
   * [ESLint](http://eslint.org/)
     * [ESLint Rules](http://eslint.org/docs/rules/)
       * [eslint-index](https://www.npmjs.com/package/eslint-index), [eslint-find-rules](https://www.npmjs.com/package/eslint-find-rules)
     * Plugins
-      * [babel](https://www.npmjs.com/package/babel-eslint), [eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments), [unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn), [no-use-extend-native](https://www.npmjs.com/package/eslint-plugin-no-use-extend-native)
+      * [prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
+      * [babel](https://www.npmjs.com/package/babel-eslint), [import](https://www.npmjs.com/package/eslint-plugin-import), [eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments), [unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn), [no-use-extend-native](https://www.npmjs.com/package/eslint-plugin-no-use-extend-native)
+      * [filenames](https://www.npmjs.com/package/eslint-plugin-filenames)
+        * [eslint-import-resolver-webpack](https://www.npmjs.com/package/eslint-import-resolver-webpack)
       * [compat](https://www.npmjs.com/package/eslint-plugin-compat)
       * [node](https://www.npmjs.com/package/eslint-plugin-node), [security](https://www.npmjs.com/package/eslint-plugin-security)
-      * [react](https://www.npmjs.com/package/eslint-plugin-react), [graphql](https://www.npmjs.com/package/eslint-plugin-graphql)
+      * [react](https://www.npmjs.com/package/eslint-plugin-react), [graphql](https://www.npmjs.com/package/eslint-plugin-graphql), [jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
       * [flowtype](https://github.com/gajus/eslint-plugin-flowtype), [jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)
-      * [ava](https://www.npmjs.com/package/eslint-plugin-ava), [mocha](https://www.npmjs.com/package/eslint-plugin-mocha), [chai-expect](https://www.npmjs.com/package/eslint-plugin-chai-expect)
+      * [jest](https://www.npmjs.com/package/eslint-plugin-jest), [ava](https://www.npmjs.com/package/eslint-plugin-ava), [mocha](https://www.npmjs.com/package/eslint-plugin-mocha), [chai-expect](https://www.npmjs.com/package/eslint-plugin-chai-expect)
       * [fp](https://www.npmjs.com/package/eslint-plugin-fp), [lodash](https://www.npmjs.com/package/eslint-plugin-lodash), [lodash-fp](https://www.npmjs.com/package/eslint-plugin-lodash-fp), [immutable](https://www.npmjs.com/package/eslint-plugin-immutable)
       * [promise](https://www.npmjs.com/package/eslint-plugin-promise), [optimize-regex](https://www.npmjs.com/package/eslint-plugin-optimize-regex)
-      * [filenames](https://www.npmjs.com/package/eslint-plugin-filenames)
+    * Presets
+      * [eslint-config-webcube](./packages/eslint-config-webcube/) (Author's own project)
+      * [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+      * [eslint-config-react-app](https://github.com/facebookincubator/create-react-app/tree/master/packages/eslint-config-react-app)
   * [Flow](https://flow.org)
     * [flow-typed](https://github.com/flowtype/flow-typed)
     * [Flow Runtime](https://www.npmjs.com/package/babel-plugin-flow-runtime)
@@ -1959,22 +2114,26 @@ A Subset for __Architecture and Infrastructure__
   * [HTMLHint](https://github.com/yaniswang/HTMLHint)
 * Minifier / Compressor / Optimizer
   * [Prepack](https://prepack.io/)
-  * [Babili](https://github.com/babel/babili) / [uglify-es](https://github.com/mishoo/UglifyJS2/tree/harmony) / [UglifyJS 3](https://github.com/mishoo/UglifyJS2) / [UglifyJS 2](https://github.com/mishoo/UglifyJS2/tree/v2.x)
+  * [babel-minify](https://github.com/babel/minify) / [uglify-es](https://github.com/mishoo/UglifyJS2/tree/harmony) / [UglifyJS 3](https://github.com/mishoo/UglifyJS2) / [UglifyJS 2](https://github.com/mishoo/UglifyJS2/tree/v2.x)
   * [cssnano](http://cssnano.co/) / [clean-css](https://www.npmjs.com/package/clean-css) / [CSSO](https://www.npmjs.com/package/csso)
   * [HTMLMinifier](https://github.com/kangax/html-minifier)
   * [Critical](https://www.npmjs.com/package/critical) / [Penthouse](https://www.npmjs.com/package/penthouse)
-  * [imagemin](https://www.npmjs.com/package/image-webpack-loader)
+  * [imagemin](https://www.npmjs.com/package/imagemin)
     * [gifsicle](https://github.com/kevva/imagemin-gifsicle)
     * [jpegtran](https://www.npmjs.com/package/imagemin-jpegtran) / [mozjpeg](https://github.com/imagemin/imagemin-mozjpeg)
     * [optipng](https://github.com/kevva/imagemin-optipng) / [pngquant](https://www.npmjs.com/package/imagemin-pngquant)
     * [svgo](https://github.com/kevva/imagemin-svgo)
+    * [webp](https://www.npmjs.com/package/imagemin-webp)
   * [fontmin](https://www.npmjs.com/package/fontmin), [font-spider](https://www.npmjs.com/package/font-spider)
 * Task Automation
   * [npm-run-script](https://docs.npmjs.com/cli/run-script), [npm-scripts](https://docs.npmjs.com/misc/scripts)
     * [task automation with npm run](http://substack.net/task_automation_with_npm_run), \
       [How to Use npm as a Build Tool](https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
       * [Why I Left Gulp and Grunt for npm Scripts](https://medium.freecodecamp.com/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8)
-    * Git Hooks - [Husky](https://github.com/typicode/husky)
+    * Git Hooks
+      * [Husky](https://github.com/typicode/husky)
+      * [lint-staged](https://www.npmjs.com/package/lint-staged)
+        * [Make linting great again!](https://medium.com/@okonetchnikov/make-linting-great-again-f3890e1ad6b8)
     * Environment Variables - [env-cmd](https://www.npmjs.com/package/env-cmd), [cross-env](https://www.npmjs.com/package/cross-env)
     * [get-port](https://www.npmjs.com/package/get-port), [public-ip](https://www.npmjs.com/package/public-ip)
   * [Gulp](http://gulpjs.com/)
@@ -1982,7 +2141,8 @@ A Subset for __Architecture and Infrastructure__
     * [Why you shouldn’t create a gulp plugin](http://blog.overzealous.com/post/74121048393/why-you-shouldnt-create-a-gulp-plugin-or-how-to)
     * [Gulpfile API](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
     * Utilities
-      * [gulp-util](https://www.npmjs.com/package/gulp-util), [through2](https://www.npmjs.com/package/through2), [gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins)
+      * [The Problem with gulp-util](https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5)
+      * [through2](https://www.npmjs.com/package/through2), [gulp-load-plugins](https://www.npmjs.com/package/gulp-load-plugins)
       * [gulp-size](https://www.npmjs.com/package/gulp-size), [gulp-count](https://www.npmjs.com/package/gulp-count), [gulp-notify](https://www.npmjs.com/package/gulp-notify)
       * [gulp-debug](https://www.npmjs.com/package/gulp-debug)
       * [gulp-if](https://www.npmjs.com/package/gulp-if), [gulp-filter](https://www.npmjs.com/package/gulp-filter), [merge-stream](https://www.npmjs.com/package/merge-stream)
@@ -2000,27 +2160,29 @@ A Subset for __Architecture and Infrastructure__
   * Micro Generator
     * [Plop](https://plopjs.com)
   * Live Reload / Watch / Preview
-    * [webpack Dev Server](https://www.npmjs.com/package/webpack-dev-server)
-      * [webpack Dashboard](https://www.npmjs.com/package/webpack-dashboard)
-      * [webpack Dev Middleware](https://www.npmjs.com/package/webpack-dev-middleware)
-    * [React Hot Loader 3](http://gaearon.github.io/react-hot-loader/)
+    * [webpack-serve](https://github.com/webpack-contrib/webpack-serve)
+    * [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
+      * [webpack-dashboard](https://www.npmjs.com/package/webpack-dashboard)
+      * [webpack-dev-middleware](https://www.npmjs.com/package/webpack-dev-middleware)
+    * [Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement/) / [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
     * [Browsersync](https://www.npmjs.com/package/browser-sync)
     * Electron - [Electron Connect](https://www.npmjs.com/package/electron-connect)
     * React Native - [Expo](https://expo.io/)
     * Node.js - [nodemon](https://www.npmjs.com/package/nodemon)
   * Dev Tools
-    * [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
+    * [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/) / [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools) / [Safari Web Inspector](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/) / [Microsoft Edge F12 Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide)
       * Console - [Console API](https://developers.google.com/web/tools/chrome-devtools/console/console-reference), [Command Line API](https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference)
     * Third-party Panels
       * [React DevTools](https://github.com/facebook/react-devtools) / [AngularJS Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk) / [Augury](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd) / [Vue.js DevTools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
       * [React Perf](https://chrome.google.com/webstore/detail/react-perf/hacmcodfllhbnekmghgdlplbdnahmhmm)
       * [Redux DevTools](https://github.com/gaearon/redux-devtools)
-      * [Immutable DevTools](https://github.com/andrewdavey/immutable-devtools)
+      * [Immutable DevTools](https://github.com/andrewdavey/immutable-devtools), [Immutable.js Object Formatter](https://chrome.google.com/webstore/detail/immutablejs-object-format/hgldghadipiblonfkkicmgcbbijnpeog)
       * [Apollo Client Devtools](https://github.com/apollographql/apollo-client-devtools), [GraphQL Network](https://github.com/Ghirro/graphql-network)
       * [JWT Inspector](https://jwtinspector.io/)
       * [WebGL Insight](https://github.com/3Dparallax/insight/), [Three.js Editor Extension](https://chrome.google.com/webstore/detail/threejs-editor-extension/fbgbekpggeldiacgjkacbkkcbjhmakea)
     * [Reactotron](https://github.com/infinitered/reactotron)
     * Electron - [Devtron](https://github.com/electron/devtron)
+    * [React Native Debugger](https://github.com/jhen0409/react-native-debugger)
   * HTTP Inspector
     * [Paw](https://paw.cloud/) / [Postman](https://www.getpostman.com/) / [HTTPie](https://github.com/jakubroztocil/httpie)
   * Debugging Proxy
@@ -2029,7 +2191,7 @@ A Subset for __Architecture and Infrastructure__
 * Deployment
   * Publishing App
     * Server-side Rendering
-      * [Next.js](https://github.com/zeit/next.js)
+      * [Hypernova](https://github.com/airbnb/hypernova)
       * [React Isomorphic Render](https://www.npmjs.com/package/react-isomorphic-render)
       * [React Engine](https://www.npmjs.com/package/react-engine)
       * [Express React Views](https://www.npmjs.com/package/express-react-views)
@@ -2089,17 +2251,18 @@ A Subset for __Architecture and Infrastructure__
   * Logging
     * Global
       * [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) / [Google Stackdriver](https://cloud.google.com/stackdriver/)
+      * [PM2 Plus](https://pm2.io/plus/)
     * China
-      * [阿里云-云监控](https://www.aliyun.com/product/jiankong) + [阿里云-日志服务 SLS](https://www.aliyun.com/product/sls) / [腾讯云-基础监控 BCM](https://www.qcloud.com/product/bcm)
+      * [阿里云-云监控](https://www.aliyun.com/product/jiankong) / [腾讯云-基础监控 BCM](https://www.qcloud.com/product/bcm)
   * APM (Application Performance Management)
     * Global
       * [New Relic](https://newrelic.com/) / [AppDynamics](https://www.appdynamics.com/) / [Datadog APM](https://www.datadoghq.com/apm/)
-      * [Pingdom](https://www.pingdom.com/), [AppNeta](https://www.appneta.com/)
+      * [Pingdom](https://www.pingdom.com/) / [SpeedCurve](https://speedcurve.com/) / [AppNeta](https://www.appneta.com/)
       * [Trace](https://trace.risingstack.com)
     * China
       * [OneAPM](https://www.oneapm.com/) / [听云](http://www.tingyun.com/)
-      * [腾讯云-云拨测 CAT](https://www.qcloud.com/product/cat) / [百度云观测](http://ce.baidu.com/)
-      * [alinode](https://alinode.aliyun.com/)
+      * [监控宝](https://www.jiankongbao.com/) / [百度云观测](http://ce.baidu.com/) / [360网站服务监控](http://jk.cloud.360.cn/) / [腾讯云-云拨测 CAT](https://www.qcloud.com/product/cat)
+      * [阿里云 Node.js 性能平台](https://www.aliyun.com/product/nodejs)
 
 \>\> Return to [Table of Contents](#table-of-contents)
 
@@ -2108,6 +2271,7 @@ A Subset for __Architecture and Infrastructure__
 * Intro
   * [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
   * [The Bash Guide](http://guide.bash.academy/)
+  * [Linux Shell Scripting Tutorial (LSST)](https://bash.cyberciti.biz/guide/Main_Page)
 * Terminal
   * [iTerm2](https://www.iterm2.com/)
     * [iTerm Color Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
@@ -2117,6 +2281,7 @@ A Subset for __Architecture and Infrastructure__
   * [Homebrew](https://brew.sh/)
 * Shell
   * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+  * [Spaceship ZSH Theme](https://github.com/denysdovhan/spaceship-zsh-theme)
   * Zsh Plugins
     * [zsh-better-npm-completion](https://github.com/lukechilds/zsh-better-npm-completion)
     * [Awesome Zsh Plugins](https://github.com/unixorn/awesome-zsh-plugins)
@@ -2124,7 +2289,7 @@ A Subset for __Architecture and Infrastructure__
   * [Vimtutor](http://linuxcommand.org/man_pages/vimtutor1.html)
   * [spf13-vim](https://github.com/spf13/spf13-vim) / [YVim](https://github.com/dexteryy/YVim)
 * Git
-  * [Git-it](https://github.com/jlord/git-it-electron)
+  * [Git-it](https://github.com/jlord/git-it-electron), [TryGit Simulator](https://try.github.io/)
   * [Become a git guru](https://www.atlassian.com/git/tutorials), [Git Glossary](https://www.atlassian.com/git/glossary)
   * [Pro Git - Index of Commands](https://git-scm.com/book/commands)
   * [commitizen](https://github.com/commitizen/cz-cli)
@@ -2132,7 +2297,7 @@ A Subset for __Architecture and Infrastructure__
 * [dotfiles](https://dotfiles.github.io/)
 * Utilities
   * Analysis - [cloc](https://github.com/AlDanial/cloc/)
-  * Finding - [ag (The Silver Searcher)](https://github.com/ggreer/the_silver_searcher), [peco](https://github.com/peco/peco), [jq](https://stedolan.github.io/jq)
+  * Finding - [rg (ripgrep)](https://github.com/BurntSushi/ripgrep) / [ag (The Silver Searcher)](https://github.com/ggreer/the_silver_searcher), [peco](https://github.com/peco/peco), [jq](https://stedolan.github.io/jq), [fzf](https://github.com/junegunn/fzf)
   * Processes - [glances](https://github.com/nicolargo/glances) / [vtop](https://www.npmjs.com/package/vtop), [fkill](https://www.npmjs.com/package/fkill-cli)
   * Help - [tldr](https://github.com/tldr-pages/tldr) / [howdoi](https://github.com/gleitz/howdoi)
 
@@ -2143,7 +2308,7 @@ A Subset for __Architecture and Infrastructure__
 * Input
   * Options/Arguments Parser - [minimist](https://www.npmjs.com/package/minimist) / [commander](https://www.npmjs.com/package/commander) / [yargs](https://www.npmjs.com/package/yargs)
   * Interactive - [inquirer](https://www.npmjs.com/package/inquirer)
-  * Rapidly Building - [cli](https://www.npmjs.com/package/cli) / [vorpal](https://www.npmjs.com/package/vorpal)
+  * Rapidly Building - [vorpal](https://www.npmjs.com/package/vorpal) / [cli](https://www.npmjs.com/package/cli)
   * Configuration - [Liftoff](https://www.npmjs.com/package/liftoff)
 * Output
   * Color / Style - [Chalk](https://www.npmjs.com/package/chalk)
@@ -2187,24 +2352,85 @@ A Subset for __Architecture and Infrastructure__
 
 ### IDE / Editors
 
+* [VS Code](https://code.visualstudio.com/) Plugins
+  * UI
+    * [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
+    * [Indenticator](https://marketplace.visualstudio.com/items?itemName=SirTori.indenticator)
+  * Operating
+    * [VSCodeVim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+    * [Search node_modules](https://marketplace.visualstudio.com/items?itemName=jasonnutter.search-node-modules)
+    * [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+    * [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+    * [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) / [Chinese Lorem Ipsum](https://marketplace.visualstudio.com/items?itemName=galend.vsc-lorem-cn)
+    * Snippets
+      * [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+      * [JavaScript Snippet Pack](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-javascript-snippet-pack)
+      * [Reactjs code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
+      * [React Redux ES6 Snippets](https://marketplace.visualstudio.com/items?itemName=timothymclane.react-redux-es6-snippets)
+      * [eslint-disable-snippets](https://marketplace.visualstudio.com/items?itemName=drKnoxy.eslint-disable-snippets)
+      * [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+      * [SVG Icons](https://marketplace.visualstudio.com/items?itemName=idleberg.svg-icons)
+      * [Icon Fonts](https://marketplace.visualstudio.com/items?itemName=idleberg.icon-fonts)
+  * Formating
+    * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+    * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) / [stylefmt](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
+    * [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+    * [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case)
+    * [Align](https://marketplace.visualstudio.com/items?itemName=steve8708.Align)
+  * Static Analysis
+    * [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode)
+    * [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+    * [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint)
+    * Syntax
+      * [CSS Modules](https://marketplace.visualstudio.com/items?itemName=clinyong.vscode-css-modules)
+      * [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+      * [GraphQL for VSCode](https://marketplace.visualstudio.com/items?itemName=kumar-harsh.graphql-for-vscode)
+      * [Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
+  * Docs
+    * [Dash](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-dash)
+    * [Regex Previewer](https://marketplace.visualstudio.com/items?itemName=chrmarti.regex)
+    * [Color Picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color)
+    * [Swagger Viewer](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer)
+    * [API Elements extension](https://marketplace.visualstudio.com/items?itemName=vncz.vscode-apielements)
+  * Assistant
+    * [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+    * [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
+    * [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+    * [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+    * [Quokka.js - Live Scratchpad for JavaScript](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
+  * Integration
+    * VCS
+      * [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+      * [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+      * [Open in GitHub](https://marketplace.visualstudio.com/items?itemName=ziyasal.vscode-open-in-github)
+    * [Share Code](https://marketplace.visualstudio.com/items?itemName=RolandGreim.sharecode)
+    * Debug
+      * [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+      * [Node Debug 2](https://marketplace.visualstudio.com/items?itemName=ms-vscode.node-debug2)
+      * [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+    * [React Native Tools](https://marketplace.visualstudio.com/items?itemName=vsmobile.vscode-react-native)
+    * [Cordova Tools](https://marketplace.visualstudio.com/items?itemName=vsmobile.cordova-tools)
+    * Write
+      * [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+      * [Mermaid Preview](https://marketplace.visualstudio.com/items?itemName=vstirbu.vscode-mermaid-preview)
 * [Atom](https://atom.io/) Plugins
   * UI
     * [fonts](https://atom.io/packages/fonts)
     * [file-icons](https://atom.io/packages/file-icons)
     * [highlight-line](https://atom.io/packages/highlight-line), [highlight-selected](https://atom.io/packages/highlight-selected)
     * [indent-guide-improved](https://atom.io/packages/indent-guide-improved), [trailing-spaces](https://atom.io/packages/trailing-spaces)
-  * Formating
-    * [auto-detect-indentation](https://atom.io/packages/auto-detect-indentation), [editorconfig](https://atom.io/packages/editorconfig)
-    * [prettier-atom](https://atom.io/packages/prettier-atom)
-    * [atom-stylefmt](https://atom.io/packages/stylefmt) / [postcss-sorting](https://atom.io/packages/postcss-sorting) / [atom-beautify](https://atom.io/packages/atom-beautify)
-    * [aligner](https://atom.io/packages/aligner) / [atom-alignment](https://atom.io/packages/atom-alignment)
-    * [toggle-quotes](https://atom.io/packages/toggle-quotes)
   * Operating
     * [vim-mode-plus](https://atom.io/packages/vim-mode-plus), [jumpy](https://atom.io/packages/jumpy)
     * [Sublime-Style-Column-Selection](https://atom.io/packages/Sublime-Style-Column-Selection)
     * [Emmet](https://atom.io/packages/emmet)
     * Snippets
       * [turbo-javascript](https://atom.io/packages/turbo-javascript)
+  * Formating
+    * [auto-detect-indentation](https://atom.io/packages/auto-detect-indentation), [editorconfig](https://atom.io/packages/editorconfig)
+    * [prettier-atom](https://atom.io/packages/prettier-atom)
+    * [atom-stylefmt](https://atom.io/packages/stylefmt) / [postcss-sorting](https://atom.io/packages/postcss-sorting) / [atom-beautify](https://atom.io/packages/atom-beautify)
+    * [aligner](https://atom.io/packages/aligner) / [atom-alignment](https://atom.io/packages/atom-alignment)
+    * [toggle-quotes](https://atom.io/packages/toggle-quotes)
   * Static Analysis
     * [file-types](https://atom.io/packages/file-types)
     * [language-babel](https://atom.io/packages/language-babel), [atom-ternjs](https://atom.io/packages/atom-ternjs)
@@ -2228,8 +2454,6 @@ A Subset for __Architecture and Infrastructure__
   * [Nuclide](https://nuclide.io/)
   * [Reactide](http://reactide.io/)
 * Other Electron-based IDE
-  * [VS Code](https://code.visualstudio.com/)
-    * [Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode)
   * [Deco](https://www.decoide.org/)
 * [WebStorm](https://www.jetbrains.com/webstorm/)
 * Programming Fonts
@@ -2249,13 +2473,15 @@ A Subset for __Architecture and Infrastructure__
 ### Useful Apps
 
 * Playground
-  * [CodePen](http://codepen.io/) / [WebpackBin](https://www.webpackbin.com)
+  * [CodePen](http://codepen.io/) / [CodeSandbox](https://codesandbox.io/)
     * CDN for npm - [unpkg](https://unpkg.com/)
   * [RunKit](https://runkit.com)
   * [RequestBin](http://requestb.in/)
   * [jsPerf](https://jsperf.com/)
-  * [Apollo Launchpad](https://launchpad.graphql.com)
+  * [CSS in JS Playground](https://css-in-js-playground.com/)
+  * [GraphQL Playground](https://github.com/graphcool/graphql-playground), [Apollo Launchpad](https://launchpad.graphql.com)
   * [GLSL Sandbox](http://glslsandbox.com/)
+  * [ImmutableJS REPL](http://neilff.github.io/immutable-repl/?)
 * Visual Tools
   * Performance
     * [Cuzillion](http://stevesouders.com/cuzillion/)
@@ -2309,18 +2535,25 @@ A Subset for __Architecture and Infrastructure__
   * [What is ChatOps? And How do I Get Started?](https://www.pagerduty.com/blog/what-is-chatops/), \
     [What is ChatOps? A guide to its evolution, adoption, and significance](https://www.atlassian.com/blog/software-teams/what-is-chatops-adoption-guide)
   * [Hubot](https://hubot.github.com/)
-    * Adapters - [Slack](https://github.com/slackapi/hubot-slack) / [HipChat](https://www.npmjs.com/package/hubot-hipchat) / [Discord](http://npmjs.com/package/hubot-discord) / [IRC](https://www.npmjs.com/package/hubot-irc) / [Wechat](https://www.npmjs.com/package/hubot-weixin) / [QQ](https://www.npmjs.com/package/hubot-qq)
+    * Adapters - [Slack](https://github.com/slackapi/hubot-slack) / [Discord](http://npmjs.com/package/hubot-discord) / [IRC](https://www.npmjs.com/package/hubot-irc) / [Wechat](https://www.npmjs.com/package/hubot-weixin) / [QQ](https://www.npmjs.com/package/hubot-qq)
 * Kanban
   * What is Kanban? - [A](https://leankit.com/learn/kanban/what-is-kanban/), [B](http://kanbanblog.com/explained/)
   * [Getting Started With Trello](https://trello.com/guide)
   * [Github Project Boards](https://help.github.com/articles/tracking-the-progress-of-your-work-with-project-boards/)
-* Markdown
-  * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-  * [Markdown: Syntax](https://daringfireball.net/projects/markdown/syntax)
+* Presentation
+  * Markdown
+    * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+    * [Markdown: Syntax](https://daringfireball.net/projects/markdown/syntax)
+  * Diagram
+    * [Mermaid](https://mermaidjs.github.io/)
+      * [Mermaid Live Editor](https://mermaidjs.github.io/mermaid-live-editor/)
+  * Slides
+    * [Remark](https://github.com/gnab/remark)
+      * [remarker](https://github.com/kt3k/remarker)
 * Design
-  * [Sketch](https://www.sketchapp.com/learn/) + [Zeplin](https://zeplin.io/) / [Sympli](https://sympli.io/) / [Avocode](https://avocode.com/)
-  * [After Effects](http://www.adobe.com/products/aftereffects.html) + [Lottie](https://airbnb.design/lottie/) / [bodymovin](https://github.com/bodymovin/bodymovin)
-  * [Figma](https://www.figma.com/)
-  * [InVision](https://www.invisionapp.com/)
+  * [Sketch](https://www.sketchapp.com/learn/) / [Figma](https://www.figma.com/)
+  * [InVision](https://www.invisionapp.com/) / [Atomic](https://atomic.io/) / [Proto.io](https://proto.io/)
+  * [Zeplin](https://zeplin.io/) / [Sympli](https://sympli.io/) / [Avocode](https://avocode.com/)
+  * [After Effects](http://www.adobe.com/products/aftereffects.html) + [Lottie](https://airbnb.design/lottie/) / [bodymovin](https://github.com/bodymovin/bodymovin) / [Inspector Spacetime](https://google.github.io/inspectorspacetime/) + [Sketch2AE](https://google.github.io/sketch2ae/)
 
 \>\> Return to [Table of Contents](#table-of-contents)
